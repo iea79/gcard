@@ -1,0 +1,48 @@
+// Reset brouser styles ========================
+* {
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+html,body,.wrapper {
+	height: 100%;
+	position: relative;
+	@include box-sizing(content-box);
+}
+
+body { 
+	font: 14px $main_font_family;
+	line-height: 1.2;
+}
+
+input, textarea {
+	outline: 0;
+}
+
+a {
+	color: #009cff;
+	text-decoration: none;
+	outline: 0;
+	&:hover,&:focus {
+		color: lighten(#009cff, 10%);
+		text-decoration: underline;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+
+ol,ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+	
+	include head.jade
+
+	body
+		.wrapper
+			
+			include header.jade
+
+			// begin left__content 
+			.left__content.js_full_height			
+				.left__content_wrap
+	
+					block aside
+
+				.left__content_toggle
+
+			// end left__content 
+
+			// begin main__content
+			main.main__content.js_full_height
+					
+				block content
+

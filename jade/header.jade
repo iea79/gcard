@@ -1,0 +1,98 @@
+// begin header 
+header.header
+
+	a.logo
+		img(src="img/logo.png")
+
+	// begin header__right 
+	.header__right
+		.header__right_item
+			.header__right_top 365 дней
+			a(href="#").header__right_link Баланс
+		.header__right_item
+			.header__right_top Sergey
+			a(href="#").header__right_link Выйти
+				i.icon-logout
+	// end header__right 
+
+	// begin navbar
+	.header__center
+		.navbar__arrow.navbar__arrow_prev
+		ul.navbar
+
+			li.navbar__item.active
+				a(href="#").navbar__link
+					i.gk-icon-car-facing-right
+					span.navbar__link_name Автомобили
+			li.navbar__item
+				a(href="#").navbar__link
+					i.gk-icon-highway
+					span.navbar__link_name Треки
+			li.navbar__item
+				a(href="#").navbar__link
+					i.gk-icon-car-statistics
+					span.navbar__link_name Отчёты и графики
+			li.navbar__item
+				a(href="#").navbar__link
+					i.gk-icon-car-navigation
+					span.navbar__link_name Геообъекты
+			li.navbar__item
+				a(href="#").navbar__link
+					i.gk-icon-auto-sound
+					span.navbar__link_name Уведомления
+			li.navbar__item
+				a(href="#").navbar__link
+					i.gk-icon-signs
+					span.navbar__link_name Маршруты
+			li.navbar__item
+				a(href="#").navbar__link
+					i.gk-icon-car-driver
+					span.navbar__link_name Водители
+			li.navbar__item
+				a(href="#").navbar__link
+					i.gk-icon-auto-repair-service
+					span.navbar__link_name Техобслуживание
+		.navbar__arrow.navbar__arrow_next
+
+	// end navbar 
+
+	// begin mini__menu 
+	.mini__menu
+		.mini__menu_item
+			.mini__menu_toggle.gk-icon-magnifying-glass
+			.mini__menu_drop
+				input(type="text" placeholder="Adress")
+		.mini__menu_item
+			.mini__menu_toggle.menu-close
+				.mini__menu_burger
+		.mini__menu_item
+			.mini__menu_toggle.gk-icon-export
+			.mini__menu_drop Импорт/Экспорт
+		.mini__menu_item
+			.mini__menu_toggle.gk-icon-gps-location
+			.mini__menu_drop Локатор
+		.mini__menu_item
+			.mini__menu_toggle.gk-icon-support
+			.mini__menu_drop Техническая поддержка
+		.mini__menu_item
+			.mini__menu_toggle.gk-icon-copy-document
+			.mini__menu_drop Документация
+		.mini__menu_item
+			.mini__menu_toggle.gk-icon-chat
+			.mini__menu_drop Чат
+		.mini__menu_item
+			.mini__menu_toggle.gk-icon-settings
+			.mini__menu_drop Настройки
+		.mini__menu_item
+			.mini__menu_toggle.gk-icon-arrow-on-world-grid
+			.mini__menu_drop
+				ul.mini__menu_lang_list
+					li 
+						a(href="#") En
+					li 
+						a(href="#") Ru
+					li 
+						a(href="#") Cn
+	// end mini__menu 
+
+// end header 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Template</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/function.js"></script>
+  </head>
+  <body>
+    <div class="login">
+      <div class="login__center">
+        <div class="login__block">
+          <!-- Login left-->
+          <div class="login__block-img"><a href="/" class="login_img-logo"><img src="img/menu-logo.png" alt=""/></a>
+            <div class="login__block-img-title">Система навигации перемещения автотранспорта</div>
+          </div>
+          <!--login form-->
+          <div class="login__block-form">
+            <ul role="tablist" class="nav nav-tabs nav-tabs-login">
+              <li role="presentation" class="active"><a href="#login" aria-controls="home" role="tab" data-toggle="tab">Вход</a></li>
+              <li role="presentation"><a href="#registration" aria-controls="profile" role="tab" data-toggle="tab">Регистрация</a></li>
+              <li role="presentation"><a href="#demo" aria-controls="messages" role="tab" data-toggle="tab">Демо</a></li>
+            </ul>
+            <div class="tab-content">
+              <!-- Login-->
+              <div id="login" role="tabpanel" class="tab-pane active">
+                <div class="input-group">
+                  <input type="email" placeholder="Логин" class="form-control"/>
+                </div>
+                <div class="input-group">
+                  <input type="password" placeholder="Пароль" class="form-control"/>
+                </div>
+                <div class="input-group">
+                  <select data-placeholder="Язык">
+                    <option></option>
+                    <option value="Русский">Русский</option>
+                    <option value="Английский">Английский</option>
+                  </select>
+                </div>
+                <div class="input-group input-group-login">
+                  <button class="btn btn-primary">Войти в систему</button>
+                </div><a href="#">Я забыл пароль</a>
+              </div>
+              <!-- Registration-->
+              <div id="registration" role="tabpanel" class="tab-pane">
+                <div class="input-group">
+                  <input type="email" placeholder="E-mail*" class="form-control"/>
+                </div>
+                <div class="input-group">
+                  <input type="password" placeholder="Пароль*" class="form-control"/>
+                </div>
+                <div class="input-group">
+                  <input type="text" placeholder="Название компании*" class="form-control"/>
+                </div>
+                <div class="input-group">
+                  <input type="tel" placeholder="Телефон" class="form-control"/>
+                </div>
+                <div class="input-group input-group-checkbox">
+                  <input id="agreement" type="checkbox"/>
+                  <label for="agreement">Я принимаю <a href="#">пользовательское соглашение</a><br> и даю согласие на обработку персональных данных.<br> Подробнее об <a href="#">условиях конфиденциальности</a></label>
+                </div>
+                <div class="input-group input-group-login">
+                  <button class="btn btn-primary">Зарегистрироваться</button>
+                </div>
+              </div>
+              <!-- Demo-->
+              <div id="demo" role="tabpanel" class="tab-pane">
+                <div class="input-group">
+                  <input type="email" placeholder="Логин" class="form-control"/>
+                </div>
+                <div class="input-group">
+                  <input type="password" placeholder="Пароль" class="form-control"/>
+                </div>
+                <div class="input-group">
+                  <select data-placeholder="Язык">
+                    <option></option>
+                    <option value="Русский">Русский</option>
+                    <option value="Английский">Английский</option>
+                  </select>
+                </div>
+                <div class="input-group input-group-login">
+                  <button class="btn btn-primary">Войти в систему</button>
+                </div><a href="#">Я забыл пароль</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

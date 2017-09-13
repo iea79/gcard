@@ -1,0 +1,149 @@
+// Input text and textarea ================================================
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=number],
+input[type=datetime], 
+textarea {
+	@extend %form_field;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+// Input checkbox and radio ===============================================
+input[type=checkbox],
+input[type=radio] {
+	padding: 0;
+}
+
+input[type=checkbox]:not(:disabled),
+input[type=radio]:not(:disabled) {
+    cursor: pointer;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    // border: 1px solid #aaa;
+    overflow: hidden;
+    // margin-top: -4px;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    outline: 0;
+    background: 0 0;
+    text-align: center;
+    position: relative;
+    background-color: #009cff;
+    @include border-radius(2px);
+}
+
+input[type=radio] {
+    @include border-radius(50%);
+}
+
+input[type=checkbox]:before,
+input[type=radio]:before {
+    display: block;
+
+}
+
+input[type=radio]:checked:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -3px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+}
+
+input[type=checkbox]:checked:before,
+input[type=checkbox]:indeterminate:before {
+    content: image-url('checkbox.svg');
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 8px;
+    top: 3px;
+    left: 2px;
+}
+
+input[type=checkbox]:indeterminate:before {
+    content: "\f068";
+}
+
+input[type=checkbox]:disabled,
+input[type=radio]:disabled {
+    border-color: #ddd;
+}
+
+input[type=radio]:disabled:checked:before {
+    background-color: #aaa;
+}
+
+input[type=checkbox]:disabled:checked:before,
+input[type=checkbox]:disabled:indeterminate:before {
+    color: #aaa;
+}
+
+/* ======================================== 
+Buttons
+======================================== */
+// Style for button and pseudo button for input and link
+.btn {
+    color: $btn_default_text_color;
+    font-family: $main_font_family;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 20px 10px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    background-color: $btn_default_bg_color;
+    text-align: center;
+    max-width: 100%;
+    cursor: pointer;
+    @include border-radius(20px);
+    @include trs(0.3s);
+    &:hover,&:active {
+        background-color: lighten($btn_default_bg_color, 7%);
+        outline: 0;
+    }
+    &:focus {
+        background-color: $btn_default_bg_color;
+        outline: 0;
+    }
+    @each $status_el, $color_el_bg in $el_bg_colors {
+        &-#{$status_el} {
+            background-color: $color_el_bg;
+            color: $btn_contrast_text_color;
+            &:hover,&:active {
+                background-color: lighten($color_el_bg, 7%);
+            }
+            &:focus {
+                background-color: $color_el_bg;
+                color: $btn_contrast_text_color;
+            }
+        }
+    }   
+}

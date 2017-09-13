@@ -1,0 +1,13 @@
+/* Footer
+ ----------------------------------------------------------------------------- */
+.footer {
+	position: relative;
+	height: $footer_height;
+	background: $footer_bg_color;
+	@extend %clear_all;
+	.container_center {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+

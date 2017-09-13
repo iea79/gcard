@@ -1,0 +1,20 @@
+// Icon
+[class^="icon-"], [class*="icon-"] {
+	display: inline-block;
+	&:before {
+		content: '';
+	}
+}
+
+.icon-list-cell {
+	&:before {
+		content: image-url('list-cell.png');
+	}
+}
+
+.icon-list-round {
+	&:before {
+		content: '';
+		
+	}
+}

@@ -1,0 +1,82 @@
+// Grid
+// ------------------------
+// Example - for html
+// <div class="grid grid__1_3 ">
+//  	<div class="grid__wrapper">
+// 			...
+//  	</div>
+//  	<div class="grid__wrapper">
+// 			...
+//  	</div>
+//  	<div class="grid__wrapper">
+// 			...
+//  	</div>
+// </div>
+// ------------------------
+.grid {
+	margin-left: -$grid_padding;
+	@include flex();
+	@include flex-flow(row wrap);
+	@extend %clear_all;
+	&-nowrap {
+		@include flex-flow(row nowrap);
+	}
+	&__wrapper {
+		padding-left: $grid_padding;
+		padding-bottom: $grid_padding;
+		width: auto;
+		&.width {
+			&_1 {
+				@include flex-basis(100%);
+			}
+			&_2 {
+				@include flex-basis(50%);
+			}
+			&_3 {
+				width: 33.3%;
+			}
+			&_4 {
+				width: 25%;
+			}
+			&_5 {
+				width: 20%;
+			}
+			&_2_3 {
+				width: 66%;
+			}
+			&_3_4 {
+				width: 75%;
+			}
+		}
+	}
+	&__item {
+		&.active {
+			// border: 3px solid #ddd;
+		}
+	}
+	&__1 {
+		.grid__wrapper {		
+			width: 100%;
+		}
+	}
+	&__2 {
+		.grid__wrapper {		
+			width: 50%;
+		}
+	}
+	&__3 {
+		.grid__wrapper {
+			width: 33.3%;
+		}
+	}
+	&__4 {
+		.grid__wrapper {		
+			width: 25%;
+		}
+	}
+	&__5 {
+		.grid__wrapper {		
+			width: 20%;
+		}
+	}
+}

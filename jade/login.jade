@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+html(lang="en")
+	
+	include head.jade
+	body
+		.login
+			.login__center
+				.login__block
+					// Login left
+					.login__block-img
+						a.login_img-logo(href="/")
+							img(src="img/menu-logo.png" alt="")
+						.login__block-img-title Система навигации перемещения автотранспорта
+					//login form
+					.login__block-form
+						ul.nav.nav-tabs.nav-tabs-login(role="tablist")
+							li.active(role="presentation")
+								a(href="#login" aria-controls="home" role="tab" data-toggle="tab") Вход
+							li(role="presentation")
+								a(href="#registration" aria-controls="profile" role="tab" data-toggle="tab") Регистрация
+							li(role="presentation")
+								a(href="#demo" aria-controls="messages" role="tab" data-toggle="tab") Демо
+						.tab-content
+							// Login
+							.tab-pane.active#login(role="tabpanel")
+								.input-group
+									input.form-control(type="email" placeholder="Логин")
+								.input-group
+									input.form-control(type="password" placeholder="Пароль")
+								.input-group
+									select(data-placeholder="Язык")
+										option
+										option(value="Русский") Русский
+										option(value="Английский") Английский
+								.input-group.input-group-login
+									button.btn.btn-primary Войти в систему
+								a(href="#") Я забыл пароль
+
+							// Registration
+							.tab-pane#registration(role="tabpanel")
+								.input-group
+									input.form-control(type="email" placeholder="E-mail*")
+								.input-group
+									input.form-control(type="password" placeholder="Пароль*")
+								.input-group
+									input.form-control(type="text" placeholder="Название компании*")
+								.input-group
+									input.form-control(type="tel" placeholder="Телефон")
+								.input-group.input-group-checkbox
+									input#agreement(type="checkbox")
+									label(for="agreement").
+										Я принимаю <a href="#">пользовательское соглашение</a><br> и даю согласие на обработку персональных данных.<br> Подробнее об <a href="#">условиях конфиденциальности</a>
+								.input-group.input-group-login
+									button.btn.btn-primary Зарегистрироваться
+							// Demo
+							.tab-pane#demo(role="tabpanel")
+								.input-group
+									input.form-control(type="email" placeholder="Логин")
+								.input-group
+									input.form-control(type="password" placeholder="Пароль")
+								.input-group
+									select(data-placeholder="Язык")
+										option
+										option(value="Русский") Русский
+										option(value="Английский") Английский
+								.input-group.input-group-login
+									button.btn.btn-primary Войти в систему
+								a(href="#") Я забыл пароль

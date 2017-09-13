@@ -1,0 +1,36 @@
+%tab-active {
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid #009cff;
+}
+.nav-tabs {
+    margin: 0 auto !important;
+    text-align: center !important;
+    border-bottom: 1px solid #476a90 !important;
+    padding: 0 !important;
+    @extend %clear_a;
+	&>li {
+		li a,input,select {
+		}
+
+		&>a {
+		    border: 0;
+		    border-bottom: 3px solid transparent;
+		    @include trs(.3);
+			.icon_plus {
+			}
+			&:hover,&:focus {
+				@extend %tab-active;
+			}
+		}
+		&.active {
+			a {
+				@extend %tab-active;
+				&:hover,&:focus {
+					@extend %tab-active;
+				}
+			}
+		}
+	}
+}

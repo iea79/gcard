@@ -1,0 +1,66 @@
+// Global variables ==================================
+// ====================================================
+
+// Breakpoints ========================================
+// ====================================================
+$breakpoint-small:                               480px !default;
+$breakpoint-medium:                              760px !default;
+$breakpoint-large:                               960px !default;
+$breakpoint-xlarge:                              1200px !default;
+
+$breakpoint-mini-max:                            ($breakpoint-small - 1) !default;
+$breakpoint-small-max:                           ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max:                          ($breakpoint-large - 1) !default;
+$breakpoint-large-max:                           ($breakpoint-xlarge - 1) !default;
+
+
+// Button =============================================
+// ====================================================
+// .btn{
+// 		@each $status, $color in $el_bg_colors {
+// 			&__#{$status} {
+// 				background: $color;
+// 			}
+// 		}
+// }
+$el-bg-colors: (
+	primary: #009cff, // color for .element_primary
+	success: #27bf2e, // color for .element_success
+	warning: #8d8f98, // color for .element_warning
+	danger: #ff4d61, // color for .element_danger
+	link: transparent, // color for .element_info
+);
+
+$btn_default_bg_color:							#fff;
+$btn_default_bg_color_hover:					#eee;
+$btn_default_text_color:                        #3c3d45;
+$btn_contrast_text_color:                       #fff;
+
+// Field ==============================================
+// ====================================================
+$input_bg_color:								#fff;
+$input_border_color:							#ccc;
+$input_placeholder_color:						#ddd;
+$input_bg_hover_color:							#fbfbfb;
+
+$input_bg_errore_color:							#f00;
+$input_placeholder_errore_color:				#f00;
+
+
+// Header =============================================
+// ====================================================
+$header_bg_color:								#528ed3;
+
+// Midle ==============================================
+// ====================================================
+$main_font_family:								'Muller Regular';
+$grid_padding:									20px;
+$body_bg_color:									#f5f5f5;
+
+// Footer =============================================
+// ====================================================
+$footer_height: 								100px;
+$footer_bg_color:								#528ed3;
+
+
+

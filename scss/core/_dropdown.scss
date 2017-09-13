@@ -1,0 +1,26 @@
+.dropdown {
+    font-size: 14px;
+    width: 100%;
+    height: 46px;
+    border: 1px solid rgba(255,255,255,.2);
+    @include border-radius(20px);
+    text-align: left;
+    position: relative;
+    &>a {
+		padding: 15px 39px;
+    	color: #fff;
+    	display: block;
+    	&:hover {
+    		text-decoration: none;
+    	}
+    }
+    .caret {
+    	position: absolute;
+    	right: 10px;
+    	top: 50%;
+    	margin-top: -2px;
+    }
+    &-menu {
+    	width: 100%;
+    }
+}

@@ -1,0 +1,32 @@
+// Pagination ==================================================================
+.pagination {
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			text-align: center;
+		}
+		&.prev, &.next {
+			a {
+				&:before {					
+				}
+			}
+		}
+		&.prev {
+			a {
+				&:before {
+					content: '<';
+					
+				}
+			}
+		}
+		&.next {
+			a {
+				&:before {
+					content: '>';
+					
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,154 @@
+@import "variables";
+
+@font-face {
+  font-family: 'glcard';
+  src:  url('#{$icomoon-font-path}/glcard.eot?rve26s');
+  src:  url('#{$icomoon-font-path}/glcard.eot?rve26s#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/glcard.ttf?rve26s') format('truetype'),
+    url('#{$icomoon-font-path}/glcard.woff?rve26s') format('woff'),
+    url('#{$icomoon-font-path}/glcard.svg?rve26s#glcard') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="gk-icon-"], [class*=" gk-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'glcard' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gk-icon-arrow-on-world-grid {
+  &:before {
+    content: $gk-icon-arrow-on-world-grid;
+  }
+}
+.gk-icon-auto-repair-service {
+  &:before {
+    content: $gk-icon-auto-repair-service;
+  }
+}
+.gk-icon-auto-sound {
+  &:before {
+    content: $gk-icon-auto-sound;
+  }
+}
+.gk-icon-car-driver {
+  &:before {
+    content: $gk-icon-car-driver;
+  }
+}
+.gk-icon-car-facing-right {
+  &:before {
+    content: $gk-icon-car-facing-right;
+  }
+}
+.gk-icon-car-navigation {
+  &:before {
+    content: $gk-icon-car-navigation;
+  }
+}
+.gk-icon-car-statistics {
+  &:before {
+    content: $gk-icon-car-statistics;
+  }
+}
+.gk-icon-chat {
+  &:before {
+    content: $gk-icon-chat;
+  }
+}
+.gk-icon-copy-document {
+  &:before {
+    content: $gk-icon-copy-document;
+  }
+}
+.gk-icon-dual-carriageway {
+  &:before {
+    content: $gk-icon-dual-carriageway;
+  }
+}
+.gk-icon-export {
+  &:before {
+    content: $gk-icon-export;
+  }
+}
+.gk-icon-gps-location {
+  &:before {
+    content: $gk-icon-gps-location;
+  }
+}
+.gk-icon-highway {
+  &:before {
+    content: $gk-icon-highway;
+  }
+}
+.gk-icon-logout {
+  &:before {
+    content: $gk-icon-logout;
+  }
+}
+.gk-icon-logout-b {
+  &:before {
+    content: $gk-icon-logout-b;
+  }
+}
+.gk-icon-logout {
+  &:before {
+    content: $gk-icon-logout;
+  }
+}
+.gk-icon-magnifying-glass {
+  &:before {
+    content: $gk-icon-magnifying-glass;
+  }
+}
+.gk-icon-paper-airplane {
+  &:before {
+    content: $gk-icon-paper-airplane;
+  }
+}
+.gk-icon-pen-on-square {
+  &:before {
+    content: $gk-icon-pen-on-square;
+  }
+}
+.gk-icon-renewable {
+  &:before {
+    content: $gk-icon-renewable;
+  }
+}
+.gk-icon-route {
+  &:before {
+    content: $gk-icon-route;
+  }
+}
+.gk-icon-settings {
+  &:before {
+    content: $gk-icon-settings;
+  }
+}
+.gk-icon-signs {
+  &:before {
+    content: $gk-icon-signs;
+  }
+}
+.gk-icon-support {
+  &:before {
+    content: $gk-icon-support;
+  }
+}
+.gk-icon-tracker {
+  &:before {
+    content: $gk-icon-tracker;
+  }
+}
+
