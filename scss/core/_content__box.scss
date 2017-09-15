@@ -1,0 +1,58 @@
+.content__box {
+	@include box-shadow(0 10px 21px rgba(0, 0, 0, 0.25));
+	background-color: #ffffff;
+	font-size: 13px;
+	color: #333333;
+	position: absolute;
+	z-index: 10;
+	&.selected {
+		z-index: 11;
+	}
+	&_min {
+		max-width: 350px;
+		.content__box_head {
+			cursor: move;
+		}
+	}
+	&_head {
+		background-color: #133a63;
+		color: #fff;
+		font-family: "Muller Bold";
+		font-size: 13px;
+		text-transform: uppercase;
+		padding: 14px 45px 14px 30px;
+		position: relative;
+		.icon-close {
+			cursor: pointer;
+			position: absolute;
+			top: 14px;
+			right: 15px;
+			font-style: normal;
+			font-size: 13px;
+		}
+	}
+	&_body {
+		padding: 22px;
+	}
+	&_map {
+		margin-bottom: 22px;
+	}
+	&_list {
+		@extend %clear_a;
+		margin-bottom: 22px;
+		&-item {
+			&+.content__box_list-item {
+				margin-top: 8px;
+			}
+		}
+		&-name {
+			float: left;
+			width: 80px;
+			color: #808080;
+		}
+		&-descr {
+			overflow: hidden;
+		}
+	}
+	&_chart {}
+}

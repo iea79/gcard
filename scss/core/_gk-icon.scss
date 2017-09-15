@@ -1,5 +1,6 @@
 $icomoon-font-path: "../fonts" !default;
 
+$gk-icon-close: "\e91a";
 $gk-icon-plus: "\e919";
 $gk-icon-arrow-on-world-grid: "\e900";
 $gk-icon-auto-repair-service: "\e901";
@@ -51,6 +52,13 @@ $gk-icon-tracker: "\e918";
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.gk-icon-close,.icon-close {
+  &:before {
+    font-family: 'glcard' !important;
+    content: $gk-icon-close;
+  }
 }
 
 .gk-icon-plus {

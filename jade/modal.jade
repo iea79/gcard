@@ -1,0 +1,102 @@
+// Modals
+// Button trigger modal modal__delete 
+// button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__delete") Click to open modal
+// begin Modal modal__delete 
+.modal.fade.modal-notif#modal__delete
+	.modal-dialog
+		.modal-content
+			a(href="#" class="modal-close" data-dismiss="modal")
+			.modal-body
+				.modal-notif-title Вы действительно хотите удалить геозону?
+			.modal-footer
+				.btn-confirm
+					div
+						button.btn(data-dismiss="modal") Отменить
+					div
+						button.btn.btn-primary Сохранить
+// end modal modal__delete 
+
+// Button trigger modal modal__create-geopoint 
+// button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-geopoint") Click to open modal
+// begin Modal modal__create-geopoint 
+.modal.fade.modal__create-geopoint#modal__create-geopoint
+	.modal-dialog
+		.modal-content
+			a(href="#" class="modal-close" data-dismiss="modal")
+			.modal-header
+				.modal-title#myModalLabel Создание геоточек
+			.modal-body 
+				.form__row
+					.form-label Группа геоточек
+					.form-field-icon
+						a(href="#").gk-icon-plus
+						.form-field
+							select(data-placeholder="")
+								option(value="")
+								option(value="1") Item
+								option(value="2") Item
+				.form__row
+					.form-label Название геоточки
+					.form-field
+						input(type="text" placeholder="")
+				.form__row
+					.form-label Описание
+					.form-field
+						input(type="text" placeholder="")
+			.modal-footer
+				.btn-confirm
+					div
+						button.btn(data-dismiss="modal") Отменить
+					div
+						button.btn.btn-primary Сохранить
+// end modal modal__create-geopoint 
+
+// Button trigger modal modal__create-geozone 
+// button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-geozone") Click to open modal
+// begin Modal modal__create-geozone 
+.modal.fade.modal__create-geozone#modal__create-geozone
+	.modal-dialog
+		.modal-content
+			a(href="#" class="modal-close" data-dismiss="modal")
+			.modal-header
+				.modal-title#myModalLabel Создание геозоны
+			.modal-body 
+				.form__row
+					.form-label Группа геозон
+					.form-field-icon
+						a(href="#").gk-icon-plus
+						.form-field
+							select(data-placeholder="")
+								option(value="")
+								option(value="1") Item
+								option(value="2") Item
+				.form__row
+					.form-label Цвет на карте
+					.form-field
+						.form-color-box(style="background-color: #ff5656;")
+				.form__row
+					.form-label Название геозоны
+					.form-field
+						input(type="text" placeholder="")
+				.form__row
+					.form-label Максимальная скорость
+					.form-field
+						input(type="text" placeholder="")
+				.form__row
+					.form-field
+						.form-checkbox
+							input#ch1(type="checkbox")
+							label(for="ch1") Круглая
+						.form-checkbox
+							input#ch2(type="checkbox")
+							label(for="ch2") Произвольная
+						.form-checkbox
+							input#ch3(type="checkbox")
+							label(for="ch3") Линейная
+			.modal-footer
+				.btn-confirm
+					div
+						button.btn(data-dismiss="modal") Отменить
+					div
+						button.btn.btn-primary Сохранить
+// end modal modal__create-geozone 

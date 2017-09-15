@@ -80,7 +80,11 @@
 /* Middle
  ----------------------------------------------------------------------------- */
 .main__content {
-	padding-bottom: $footer_height;
+	// padding-bottom: $footer_height;
+	position: relative;
 	@extend %clear_a;
+	&_container {
+		position: relative;
+	}
 }
 

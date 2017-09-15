@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Геообъекты</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/jquery-ui.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/function.js"></script>
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApMGitD0JBNexZOL6VioySmY2NRy-HKLQ&amp;callback=initMap"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- begin header -->
+      <header class="header">
+        <div class="header__mobile">
+          <div class="header__mobile_toggle"></div><a href="" class="header__mobile_logo"><img src="img/logo.png"/></a>
+        </div>
+        <div class="header__mobile_menu"><a href="" class="logo"><img src="img/logo.png"/></a>
+          <!-- begin header__right -->
+          <div class="header__right">
+            <div class="header__right_item">
+              <div class="header__right_top">365 дней</div><a href="#" class="header__right_link">Баланс</a>
+            </div>
+            <div class="header__right_item">
+              <div class="header__right_top">Sergey</div><a href="#" class="header__right_link">Выйти<i class="icon-logout"></i></a>
+            </div>
+          </div>
+          <!-- end header__right -->
+          <!-- begin navbar-->
+          <div class="header__center">
+            <ul class="navbar">
+              <li class="navbar__item"><a href="/auto.html" class="navbar__link"><i class="gk-icon-car-facing-right"></i><span class="navbar__link_name">Автомобили</span></a></li>
+              <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-highway"></i><span class="navbar__link_name">Треки</span></a></li>
+              <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-car-statistics"></i><span class="navbar__link_name">Отчёты и графики</span></a></li>
+              <li class="navbar__item"><a href="/geoobject.html" class="navbar__link"><i class="gk-icon-car-navigation"></i><span class="navbar__link_name">Геообъекты</span></a></li>
+              <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-auto-sound"></i><span class="navbar__link_name">Уведомления</span></a></li>
+              <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-signs"></i><span class="navbar__link_name">Маршруты</span></a></li>
+              <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-car-driver"></i><span class="navbar__link_name">Водители</span></a></li>
+              <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-auto-repair-service"></i><span class="navbar__link_name">Техобслуживание</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- end navbar -->
+        <!-- begin mini__menu -->
+        <div class="mini__menu">
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-magnifying-glass"></div>
+            <div class="mini__menu_drop">
+              <input type="text" placeholder="Adress"/>
+            </div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle menu-close">
+              <div class="mini__menu_burger"></div>
+            </div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-export"></div>
+            <div class="mini__menu_drop">Импорт/Экспорт</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-gps-location"></div>
+            <div class="mini__menu_drop">Локатор</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-support"></div>
+            <div class="mini__menu_drop">Техническая поддержка</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-copy-document"></div>
+            <div class="mini__menu_drop">Документация</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-chat"></div>
+            <div class="mini__menu_drop">Чат</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-settings"></div>
+            <div class="mini__menu_drop">Настройки</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-arrow-on-world-grid"></div>
+            <div class="mini__menu_drop">
+              <ul class="mini__menu_lang_list">
+                <li> <a href="#">En</a></li>
+                <li> <a href="#">Ru</a></li>
+                <li> <a href="#">Cn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end mini__menu -->
+      </header>
+      <!-- end header -->
+      <!-- begin left__content -->
+      <div class="left__content js_full_height">			
+        <div class="left__content_wrap">
+          <ul role="tablist" class="nav nav-tabs nav-tabs-login">
+            <li class="active"><a href="#1" aria-controls="" role="tab" data-toggle="tab"><i data-toggle="modal" data-target="#modal__create-geozone" class="gk-icon-plus"></i>Геозоны</a></li>
+            <li><a href="#2" aria-controls="" role="tab" data-toggle="tab"><i data-toggle="modal" data-target="#modal__create-geopoint" class="gk-icon-plus"> </i>Геоточки</a></li>
+          </ul>
+          <div class="tab-content">
+            <!-- Tab 1-->
+            <div id="1" role="tabpanel" class="tab-pane active">
+              <!--item 1-->
+              <div data-toggle="collapse" data-target="#p1" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
+                <div class="panel-heading-name">Популярные зоны<span class="count">(2)</span></div>
+              </div>
+              <div id="p1" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Стоянка возле магазина</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Москва</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Тест</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                </ul>
+              </div>
+              <!--item 2-->
+              <div data-toggle="collapse" data-target="#p2" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
+                <div class="panel-heading-name">Тест<span class="count">(2)</span></div>
+              </div>
+              <div id="p2" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Стоянка возле магазина</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Москва</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Тест</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                </ul>
+              </div>
+              <!--item 3-->
+              <div data-toggle="collapse" data-target="#p3" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
+                <div class="panel-heading-name">Автостоянка Магазин<span class="count">(12)</span></div>
+              </div>
+              <div id="p3" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Стоянка возле магазина</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Москва</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Тест</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                </ul>
+              </div>
+              <!--item 4-->
+              <div data-toggle="collapse" data-target="#p4" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
+                <div class="panel-heading-name">Jeep<span class="count">(12)</span></div>
+              </div>
+              <div id="p4" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Стоянка возле магазина</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Москва</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Тест</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Tab 2-->
+            <div id="2" role="tabpanel" class="tab-pane">
+              <!--item 1-->
+              <div data-toggle="collapse" data-target="#p1" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
+                <div class="panel-heading-name">Популярные зоны<span class="count">(2)</span></div>
+              </div>
+              <div id="p1" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Стоянка возле магазина</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Москва</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Тест</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                </ul>
+              </div>
+              <!--item 2-->
+              <div data-toggle="collapse" data-target="#p2" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
+                <div class="panel-heading-name">Тест<span class="count">(2)</span></div>
+              </div>
+              <div id="p2" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Стоянка возле магазина</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Москва</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Тест</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                </ul>
+              </div>
+              <!--item 3-->
+              <div data-toggle="collapse" data-target="#p3" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
+                <div class="panel-heading-name">Автостоянка Магазин<span class="count">(12)</span></div>
+              </div>
+              <div id="p3" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Стоянка возле магазина</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Москва</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Тест</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                </ul>
+              </div>
+              <!--item 4-->
+              <div data-toggle="collapse" data-target="#p4" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
+                <div class="panel-heading-name">Jeep<span class="count">(12)</span></div>
+              </div>
+              <div id="p4" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Стоянка возле магазина</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Москва</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
+                    <div class="list__icons_center">Тест</div>
+                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="left__content_toggle"></div>
+      </div>
+      <!-- end left__content -->
+      <!-- begin main__content-->
+      <main class="main__content js_full_height">
+        <div id="map" class="map_box"></div>
+      </main>
+    </div>
+    <!-- Modals-->
+    <!-- Button trigger modal modal__delete -->
+    <!-- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__delete") Click to open modal-->
+    <!-- begin Modal modal__delete -->
+    <div id="modal__delete" class="modal fade modal-notif">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-body">
+            <div class="modal-notif-title">Вы действительно хотите удалить геозону?</div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__delete -->
+    <!-- Button trigger modal modal__create-geopoint -->
+    <!-- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-geopoint") Click to open modal-->
+    <!-- begin Modal modal__create-geopoint -->
+    <div id="modal__create-geopoint" class="modal fade modal__create-geopoint">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Создание геоточек</div>
+          </div>
+          <div class="modal-body"> 
+            <div class="form__row">
+              <div class="form-label">Группа геоточек</div>
+              <div class="form-field-icon"><a href="#" class="gk-icon-plus"></a>
+                <div class="form-field">
+                  <select data-placeholder="">
+                    <option value=""></option>
+                    <option value="1">Item</option>
+                    <option value="2">Item</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Название геоточки</div>
+              <div class="form-field">
+                <input type="text" placeholder=""/>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Описание</div>
+              <div class="form-field">
+                <input type="text" placeholder=""/>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__create-geopoint -->
+    <!-- Button trigger modal modal__create-geozone -->
+    <!-- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-geozone") Click to open modal-->
+    <!-- begin Modal modal__create-geozone -->
+    <div id="modal__create-geozone" class="modal fade modal__create-geozone">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Создание геозоны</div>
+          </div>
+          <div class="modal-body"> 
+            <div class="form__row">
+              <div class="form-label">Группа геозон</div>
+              <div class="form-field-icon"><a href="#" class="gk-icon-plus"></a>
+                <div class="form-field">
+                  <select data-placeholder="">
+                    <option value=""></option>
+                    <option value="1">Item</option>
+                    <option value="2">Item</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Цвет на карте</div>
+              <div class="form-field">
+                <div style="background-color: #ff5656;" class="form-color-box"></div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Название геозоны</div>
+              <div class="form-field">
+                <input type="text" placeholder=""/>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Максимальная скорость</div>
+              <div class="form-field">
+                <input type="text" placeholder=""/>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-field">
+                <div class="form-checkbox">
+                  <input id="ch1" type="checkbox"/>
+                  <label for="ch1">Круглая</label>
+                </div>
+                <div class="form-checkbox">
+                  <input id="ch2" type="checkbox"/>
+                  <label for="ch2">Произвольная</label>
+                </div>
+                <div class="form-checkbox">
+                  <input id="ch3" type="checkbox"/>
+                  <label for="ch3">Линейная</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__create-geozone -->
+  </body>
+</html>

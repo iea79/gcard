@@ -1,3 +1,93 @@
+.form {
+    &__row {
+        @extend %clear_a;
+        &+.form__row {
+            margin-top: 19px;
+        }
+    }
+    &-label {
+        color: #808080;
+        font-family: "Muller Regular";
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    &-field {
+        color: #333333;
+        .select2 {
+            &-container {
+                position: relative;
+                z-index: 2;
+                width: 100% !important;
+            }
+            &-selection {
+                &--single {
+                    @include border-radius(20px);
+                    padding: 7px 12px;
+                    border: 2px solid #e6e6e6;
+                    min-height: 32px;
+                    color: #333333;
+                }
+                &__rendered {
+                }
+            }
+        }
+        input:not([type]),
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=url],
+        input[type=search],
+        input[type=tel],
+        input[type=number],
+        input[type=datetime], 
+        textarea {
+            border: 2px solid #e6e6e6;
+            width: 100%;
+        }
+        &-icon {
+            .form-field {
+                overflow: hidden;
+                &>* {
+                    width: 100%;
+                }
+            }
+            [class*="icon-"] {
+                float: right;
+                font-size: 14px;
+                margin-top: 7px;
+                &+.form-field {
+                    padding-right: 10px;
+                }
+                &:hover,&:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &-color-box {
+        width: 65px;
+        height: 32px;
+        @include border-radius(4px);
+        cursor: pointer;
+    }
+    &-checkbox {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        [type="checkbox"] {
+            background-color: #cccccc;
+            margin-right: 5px;
+            &+label {
+                font-family: "Muller Regular";
+                font-size: 13px;
+                font-weight: 400;
+            }
+            &:checked:before {
+                top: 1px;
+            }
+        }
+    }
+}
 // Input text and textarea ================================================
 input:not([type]),
 input[type=text],
@@ -111,26 +201,27 @@ Buttons
 // Style for button and pseudo button for input and link
 .btn {
     color: $btn_default_text_color;
-    font-family: $main_font_family;
-    font-size: 16px;
+    font-family: "Muller Medium";
+    font-size: 13px;
     font-weight: normal;
     padding: 10px 20px 10px;
-    border: none;
+    border: 2px solid #009cff;
     outline: none;
     text-decoration: none;
     display: inline-block;
-    background-color: $btn_default_bg_color;
+    background-color: transparent;
     text-align: center;
     max-width: 100%;
     cursor: pointer;
     @include border-radius(20px);
     @include trs(0.3s);
     &:hover,&:active {
-        background-color: lighten($btn_default_bg_color, 7%);
+        // background-color: lighten($btn_default_bg_color, 7%);
+        border: 2px solid lighten(#009cff, 7%);
         outline: 0;
     }
     &:focus {
-        background-color: $btn_default_bg_color;
+        border: 2px solid lighten(#009cff, 7%);
         outline: 0;
     }
     @each $status_el, $color_el_bg in $el_bg_colors {
@@ -138,9 +229,11 @@ Buttons
             background-color: $color_el_bg;
             color: $btn_contrast_text_color;
             &:hover,&:active {
+                border-color: lighten($color_el_bg, 7%);
                 background-color: lighten($color_el_bg, 7%);
             }
             &:focus {
+                border-color: $color_el_bg;
                 background-color: $color_el_bg;
                 color: $btn_contrast_text_color;
             }

@@ -1,0 +1,663 @@
+extends template.jade
+
+block title
+	title Автомобили
+
+block aside
+	ul.nav.nav-tabs.nav-tabs-login(role="tablist")
+		li.active
+			a(href="#1" aria-controls="" role="tab" data-toggle="tab") Группы
+		li
+			a(href="#2" aria-controls="" role="tab" data-toggle="tab") Объекты
+
+	.tab-content
+		// Tab 1
+		.tab-pane.active#1(role="tabpanel")
+			//item 1
+			.panel-heading.collapsed(data-toggle="collapse" data-target="#p1") Поиск и сортировка
+			.panel-body.collapse#p1(style="height:0;")
+				// begin grid
+				.grid
+					.grid__wrapper.width_1
+						.form__field-select_input
+							select(data-placeholder="По названию")
+								option
+								option(value="1") Показать все
+								option(value="3") Активные
+								option(value="4") Неактивные
+							input.form-control(type="text" placeholder="")
+							button.btn.btn-primary Искать
+					.grid__wrapper.width_2
+						.form-label Объект
+						select(data-placeholder="Все")
+							option
+							option(value="1") Показать все
+							option(value="3") Активные
+							option(value="4") Неактивные
+
+					.grid__wrapper.width_2
+						.form-label Активность
+						select(data-placeholder="Показать все")
+							option
+							option(value="1") Показать все
+							option(value="2") Активные
+							option(value="3") Неактивные
+
+			//item 2
+			.panel-heading.collapsed(data-toggle="collapse" data-target="#p2") Ford
+				span.count (2)
+			.panel-body.collapse#p2(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Demo DAF CAN
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#" data-content-show="cont1").icon-p
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+			//item 3
+			.panel-heading.collapsed(data-toggle="collapse" data-target="#p3") Personal
+				span.count (10)
+			.panel-body.collapse#p3(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Demo DAF CAN
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#" data-content-show="cont2").icon-p
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+			//item 4
+			.panel-heading.collapsed(data-toggle="collapse" data-target="#p4") Personal
+				span.count (10)
+			.panel-body.collapse#p4(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#" data-content-show="cont3").icon-p
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+
+		// Tab 2
+		.tab-pane#2(role="tabpanel")
+
+			.panel-heading(data-toggle="collapse" data-target="#p10") Поиск и сортировка
+			.panel-body.collapse.in#p10
+				// begin grid
+				.grid
+					.grid__wrapper.width_1
+						.form__field-select_input
+							select(data-placeholder="По названию")
+								option
+								option(value="1") Показать все
+								option(value="3") Активные
+								option(value="4") Неактивные
+							input.form-control(type="password" placeholder="")
+							button.btn.btn-primary Искать
+					.grid__wrapper.width_2
+						.form-label Объект
+						select(data-placeholder="Все")
+							option
+							option(value="1") Показать все
+							option(value="3") Активные
+							option(value="4") Неактивные
+
+					.grid__wrapper.width_2
+						.form-label Активность
+						select(data-placeholder="Показать все")
+							option
+							option(value="1") Показать все
+							option(value="2") Активные
+							option(value="3") Неактивные
+
+			.panel-body
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Demo DAF CAN
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#" data-content-show="cont1").icon-p
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Demo DAF CAN
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#" data-content-show="cont1").icon-p
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Demo DAF CAN
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#" data-content-show="cont1").icon-p
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center
+							.dropdown
+								a(href="#" data-toggle="dropdown")
+									i.icon-list-round(style="background-color: #81da62;")
+									|Ford Focus III У 744 РС 777
+									i.caret
+								ul.dropdown-menu
+									li
+										a(href="#") Построить трек
+									li
+										a(href="#") Выпонить отчет
+									li
+										a(href="#") Команда
+									li
+										a(href="#") Путевые листы
+									li
+										a(href="#") Файлы
+									li
+										a(href="#") Редактировать
+						.list__icons_right
+							a(href="#").gk-icon-dual-carriageway
+							a(href="#").gk-icon-paper-airplane
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+block content
+	.content__box.content__box_min#cont1(style="display: none;")
+		.content__box_head Ford Focus III У 744 РС 777
+			i.icon-close
+
+		.content__box_body
+			.content__box_map
+				img(src="img/map-min.jpg", alt="")
+			ul.content__box_list
+				li.content__box_list-item
+					.content__box_list-name Назначен:
+					.content__box_list-descr 17.07.2017 - 13:10:33
+				li.content__box_list-item
+					.content__box_list-name Скорость:
+					.content__box_list-descr 94
+				li.content__box_list-item
+					.content__box_list-name Телефон:
+					.content__box_list-descr +79217391056
+				li.content__box_list-item
+					.content__box_list-name Позиция:
+					.content__box_list-descr Савинское сельское поселение, РФ
+
+			ul.content__box_list
+				li.content__box_list-item
+					.content__box_list-name Моточасы:
+					.content__box_list-descr 23
+				li.content__box_list-item
+					.content__box_list-name Пробег:
+					.content__box_list-descr 219342.95
+
+			.content__box_chart
+				img(src="img/chart-min.jpg", alt="")
+
+	.content__box.content__box_min#cont2(style="display: none;")
+		.content__box_head Ford Focus III У 744 РС 777
+			i.icon-close
+
+		.content__box_body
+			.content__box_map
+				img(src="img/map-min.jpg", alt="")
+			ul.content__box_list
+				li.content__box_list-item
+					.content__box_list-name Назначен:
+					.content__box_list-descr 17.07.2017 - 13:10:33
+				li.content__box_list-item
+					.content__box_list-name Скорость:
+					.content__box_list-descr 94
+				li.content__box_list-item
+					.content__box_list-name Телефон:
+					.content__box_list-descr +79217391056
+				li.content__box_list-item
+					.content__box_list-name Позиция:
+					.content__box_list-descr Савинское сельское поселение, РФ
+
+			ul.content__box_list
+				li.content__box_list-item
+					.content__box_list-name Моточасы:
+					.content__box_list-descr 23
+				li.content__box_list-item
+					.content__box_list-name Пробег:
+					.content__box_list-descr 219342.95
+
+			.content__box_chart
+				img(src="img/chart-min.jpg", alt="")
+
+	.content__box.content__box_min#cont3(style="display: none;")
+		.content__box_head Ford Focus III У 744 РС 777
+			i.icon-close
+
+		.content__box_body
+			.content__box_map
+				img(src="img/map-min.jpg", alt="")
+			ul.content__box_list
+				li.content__box_list-item
+					.content__box_list-name Назначен:
+					.content__box_list-descr 17.07.2017 - 13:10:33
+				li.content__box_list-item
+					.content__box_list-name Скорость:
+					.content__box_list-descr 94
+				li.content__box_list-item
+					.content__box_list-name Телефон:
+					.content__box_list-descr +79217391056
+				li.content__box_list-item
+					.content__box_list-name Позиция:
+					.content__box_list-descr Савинское сельское поселение, РФ
+
+			ul.content__box_list
+				li.content__box_list-item
+					.content__box_list-name Моточасы:
+					.content__box_list-descr 23
+				li.content__box_list-item
+					.content__box_list-name Пробег:
+					.content__box_list-descr 219342.95
+
+			.content__box_chart
+				img(src="img/chart-min.jpg", alt="")

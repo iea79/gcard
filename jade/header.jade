@@ -1,58 +1,63 @@
 // begin header 
 header.header
+	.header__mobile
+		.header__mobile_toggle
+		a(href="").header__mobile_logo
+			img(src="img/logo.png")
 
-	a.logo
-		img(src="img/logo.png")
+	.header__mobile_menu
+		a(href="").logo
+			img(src="img/logo.png")
 
-	// begin header__right 
-	.header__right
-		.header__right_item
-			.header__right_top 365 дней
-			a(href="#").header__right_link Баланс
-		.header__right_item
-			.header__right_top Sergey
-			a(href="#").header__right_link Выйти
-				i.icon-logout
-	// end header__right 
+		// begin header__right 
+		.header__right
+			.header__right_item
+				.header__right_top 365 дней
+				a(href="#").header__right_link Баланс
+			.header__right_item
+				.header__right_top Sergey
+				a(href="#").header__right_link Выйти
+					i.icon-logout
+		// end header__right 
 
-	// begin navbar
-	.header__center
-		.navbar__arrow.navbar__arrow_prev
-		ul.navbar
+		// begin navbar
+		.header__center
+			//- .navbar__arrow.navbar__arrow_prev
+			ul.navbar
 
-			li.navbar__item.active
-				a(href="#").navbar__link
-					i.gk-icon-car-facing-right
-					span.navbar__link_name Автомобили
-			li.navbar__item
-				a(href="#").navbar__link
-					i.gk-icon-highway
-					span.navbar__link_name Треки
-			li.navbar__item
-				a(href="#").navbar__link
-					i.gk-icon-car-statistics
-					span.navbar__link_name Отчёты и графики
-			li.navbar__item
-				a(href="#").navbar__link
-					i.gk-icon-car-navigation
-					span.navbar__link_name Геообъекты
-			li.navbar__item
-				a(href="#").navbar__link
-					i.gk-icon-auto-sound
-					span.navbar__link_name Уведомления
-			li.navbar__item
-				a(href="#").navbar__link
-					i.gk-icon-signs
-					span.navbar__link_name Маршруты
-			li.navbar__item
-				a(href="#").navbar__link
-					i.gk-icon-car-driver
-					span.navbar__link_name Водители
-			li.navbar__item
-				a(href="#").navbar__link
-					i.gk-icon-auto-repair-service
-					span.navbar__link_name Техобслуживание
-		.navbar__arrow.navbar__arrow_next
+				li.navbar__item
+					a(href="/auto.html").navbar__link
+						i.gk-icon-car-facing-right
+						span.navbar__link_name Автомобили
+				li.navbar__item
+					a(href="#").navbar__link
+						i.gk-icon-highway
+						span.navbar__link_name Треки
+				li.navbar__item
+					a(href="#").navbar__link
+						i.gk-icon-car-statistics
+						span.navbar__link_name Отчёты и графики
+				li.navbar__item
+					a(href="/geoobject.html").navbar__link
+						i.gk-icon-car-navigation
+						span.navbar__link_name Геообъекты
+				li.navbar__item
+					a(href="#").navbar__link
+						i.gk-icon-auto-sound
+						span.navbar__link_name Уведомления
+				li.navbar__item
+					a(href="#").navbar__link
+						i.gk-icon-signs
+						span.navbar__link_name Маршруты
+				li.navbar__item
+					a(href="#").navbar__link
+						i.gk-icon-car-driver
+						span.navbar__link_name Водители
+				li.navbar__item
+					a(href="#").navbar__link
+						i.gk-icon-auto-repair-service
+						span.navbar__link_name Техобслуживание
+			//- .navbar__arrow.navbar__arrow_next
 
 	// end navbar 
 

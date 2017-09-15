@@ -1,0 +1,263 @@
+extends template.jade
+
+block title
+	title Геообъекты
+
+block aside
+	ul.nav.nav-tabs.nav-tabs-login(role="tablist")
+		li.active
+			a(href="#1" aria-controls="" role="tab" data-toggle="tab")
+				i.gk-icon-plus(data-toggle="modal" data-target="#modal__create-geozone")
+				|Геозоны
+		li
+			a(href="#2" aria-controls="" role="tab" data-toggle="tab")
+				i.gk-icon-plus(data-toggle="modal" data-target="#modal__create-geopoint") 
+				|Геоточки
+
+	.tab-content
+		// Tab 1
+		.tab-pane.active#1(role="tabpanel")
+			//item 1
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p1")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name Популярные зоны
+					span.count (2)
+			.panel-body.collapse#p1(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Стоянка возле магазина
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Москва
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Тест
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+			//item 2
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p2")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name Тест
+					span.count (2)
+			.panel-body.collapse#p2(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Стоянка возле магазина
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Москва
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Тест
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+			//item 3
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p3")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name Автостоянка Магазин
+					span.count (12)
+			.panel-body.collapse#p3(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Стоянка возле магазина
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Москва
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Тест
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+			//item 4
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p4")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name Jeep
+					span.count (12)
+			.panel-body.collapse#p4(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Стоянка возле магазина
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Москва
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Тест
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+		// Tab 2
+		.tab-pane#2(role="tabpanel")
+			//item 1
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p1")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name Популярные зоны
+					span.count (2)
+			.panel-body.collapse#p1(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Стоянка возле магазина
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Москва
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Тест
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+			//item 2
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p2")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name Тест
+					span.count (2)
+			.panel-body.collapse#p2(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Стоянка возле магазина
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Москва
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Тест
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+			//item 3
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p3")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name Автостоянка Магазин
+					span.count (12)
+			.panel-body.collapse#p3(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Стоянка возле магазина
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Москва
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Тест
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+			//item 4
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p4")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name Jeep
+					span.count (12)
+			.panel-body.collapse#p4(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Стоянка возле магазина
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Москва
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-cell
+						.list__icons_center Тест
+						.list__icons_right
+							a(href="#").icon-settings
+							a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+
+block content
