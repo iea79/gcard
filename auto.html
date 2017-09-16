@@ -9,13 +9,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/jquery-ui.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApMGitD0JBNexZOL6VioySmY2NRy-HKLQ"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/function.js"></script>
-    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApMGitD0JBNexZOL6VioySmY2NRy-HKLQ&amp;callback=initMap"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -506,112 +508,112 @@
       <!-- begin main__content-->
       <main class="main__content js_full_height">
         <div id="map" class="map_box"></div>
-        <div id="cont1" style="display: none;" class="content__box content__box_min">
-          <div class="content__box_head">Ford Focus III У 744 РС 777<i class="icon-close"></i></div>
-          <div class="content__box_body">
-            <div class="content__box_map"><img src="img/map-min.jpg" alt=""/></div>
-            <ul class="content__box_list">
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Назначен:</div>
-                <div class="content__box_list-descr">17.07.2017 - 13:10:33</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Скорость:</div>
-                <div class="content__box_list-descr">94</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Телефон:</div>
-                <div class="content__box_list-descr">+79217391056</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Позиция:</div>
-                <div class="content__box_list-descr">Савинское сельское поселение, РФ</div>
-              </li>
-            </ul>
-            <ul class="content__box_list">
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Моточасы:</div>
-                <div class="content__box_list-descr">23</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Пробег:</div>
-                <div class="content__box_list-descr">219342.95</div>
-              </li>
-            </ul>
-            <div class="content__box_chart"><img src="img/chart-min.jpg" alt=""/></div>
-          </div>
-        </div>
-        <div id="cont2" style="display: none;" class="content__box content__box_min">
-          <div class="content__box_head">Ford Focus III У 744 РС 777<i class="icon-close"></i></div>
-          <div class="content__box_body">
-            <div class="content__box_map"><img src="img/map-min.jpg" alt=""/></div>
-            <ul class="content__box_list">
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Назначен:</div>
-                <div class="content__box_list-descr">17.07.2017 - 13:10:33</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Скорость:</div>
-                <div class="content__box_list-descr">94</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Телефон:</div>
-                <div class="content__box_list-descr">+79217391056</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Позиция:</div>
-                <div class="content__box_list-descr">Савинское сельское поселение, РФ</div>
-              </li>
-            </ul>
-            <ul class="content__box_list">
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Моточасы:</div>
-                <div class="content__box_list-descr">23</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Пробег:</div>
-                <div class="content__box_list-descr">219342.95</div>
-              </li>
-            </ul>
-            <div class="content__box_chart"><img src="img/chart-min.jpg" alt=""/></div>
-          </div>
-        </div>
-        <div id="cont3" style="display: none;" class="content__box content__box_min">
-          <div class="content__box_head">Ford Focus III У 744 РС 777<i class="icon-close"></i></div>
-          <div class="content__box_body">
-            <div class="content__box_map"><img src="img/map-min.jpg" alt=""/></div>
-            <ul class="content__box_list">
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Назначен:</div>
-                <div class="content__box_list-descr">17.07.2017 - 13:10:33</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Скорость:</div>
-                <div class="content__box_list-descr">94</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Телефон:</div>
-                <div class="content__box_list-descr">+79217391056</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Позиция:</div>
-                <div class="content__box_list-descr">Савинское сельское поселение, РФ</div>
-              </li>
-            </ul>
-            <ul class="content__box_list">
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Моточасы:</div>
-                <div class="content__box_list-descr">23</div>
-              </li>
-              <li class="content__box_list-item">
-                <div class="content__box_list-name">Пробег:</div>
-                <div class="content__box_list-descr">219342.95</div>
-              </li>
-            </ul>
-            <div class="content__box_chart"><img src="img/chart-min.jpg" alt=""/></div>
-          </div>
-        </div>
       </main>
+    </div>
+    <div id="cont1" style="display: none;" class="content__box content__box_min">
+      <div class="content__box_head">Ford Focus III У 744 РС 777<i class="icon-close"></i></div>
+      <div class="content__box_body">
+        <div class="content__box_map"><img src="img/map-min.jpg" alt=""/></div>
+        <ul class="content__box_list">
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Назначен:</div>
+            <div class="content__box_list-descr">17.07.2017 - 13:10:33</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Скорость:</div>
+            <div class="content__box_list-descr">94</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Телефон:</div>
+            <div class="content__box_list-descr">+79217391056</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Позиция:</div>
+            <div class="content__box_list-descr">Савинское сельское поселение, РФ</div>
+          </li>
+        </ul>
+        <ul class="content__box_list">
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Моточасы:</div>
+            <div class="content__box_list-descr">23</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Пробег:</div>
+            <div class="content__box_list-descr">219342.95</div>
+          </li>
+        </ul>
+        <div class="content__box_chart"><img src="img/chart-min.jpg" alt=""/></div>
+      </div>
+    </div>
+    <div id="cont2" style="display: none;" class="content__box content__box_min">
+      <div class="content__box_head">Ford Focus III У 744 РС 777<i class="icon-close"></i></div>
+      <div class="content__box_body">
+        <div class="content__box_map"><img src="img/map-min.jpg" alt=""/></div>
+        <ul class="content__box_list">
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Назначен:</div>
+            <div class="content__box_list-descr">17.07.2017 - 13:10:33</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Скорость:</div>
+            <div class="content__box_list-descr">94</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Телефон:</div>
+            <div class="content__box_list-descr">+79217391056</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Позиция:</div>
+            <div class="content__box_list-descr">Савинское сельское поселение, РФ</div>
+          </li>
+        </ul>
+        <ul class="content__box_list">
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Моточасы:</div>
+            <div class="content__box_list-descr">23</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Пробег:</div>
+            <div class="content__box_list-descr">219342.95</div>
+          </li>
+        </ul>
+        <div class="content__box_chart"><img src="img/chart-min.jpg" alt=""/></div>
+      </div>
+    </div>
+    <div id="cont3" style="display: none;" class="content__box content__box_min">
+      <div class="content__box_head">Ford Focus III У 744 РС 777<i class="icon-close"></i></div>
+      <div class="content__box_body">
+        <div class="content__box_map"><img src="img/map-min.jpg" alt=""/></div>
+        <ul class="content__box_list">
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Назначен:</div>
+            <div class="content__box_list-descr">17.07.2017 - 13:10:33</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Скорость:</div>
+            <div class="content__box_list-descr">94</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Телефон:</div>
+            <div class="content__box_list-descr">+79217391056</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Позиция:</div>
+            <div class="content__box_list-descr">Савинское сельское поселение, РФ</div>
+          </li>
+        </ul>
+        <ul class="content__box_list">
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Моточасы:</div>
+            <div class="content__box_list-descr">23</div>
+          </li>
+          <li class="content__box_list-item">
+            <div class="content__box_list-name">Пробег:</div>
+            <div class="content__box_list-descr">219342.95</div>
+          </li>
+        </ul>
+        <div class="content__box_chart"><img src="img/chart-min.jpg" alt=""/></div>
+      </div>
     </div>
     <!-- Modals-->
     <!-- Button trigger modal modal__delete -->

@@ -4,9 +4,9 @@
 	font-size: 13px;
 	color: #333333;
 	position: absolute;
-	z-index: 10;
+	z-index: 30;
 	&.selected {
-		z-index: 11;
+		z-index: 31;
 	}
 	&_min {
 		max-width: 350px;

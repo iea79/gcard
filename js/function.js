@@ -56,8 +56,8 @@ $(document).ready(function() {
 	}
 	setDivHeight(); // устанавливаем высоту окна при первой загрузке страницы
 	$(window).resize(function() { 
-		setDivHeight()  // обновляем при изменении размеров окна
-		// showMenuArrow();
+		setDivHeight();  // обновляем при изменении размеров окна
+		mapResize();
 	});
 
 
@@ -76,16 +76,6 @@ $(document).ready(function() {
 		event.preventDefault();
 		$('.header__mobile_menu').toggleClass('open');
 	});
-
-	// Navbar for mobile
-	// $('.navbar').slick({
-	// 	infinite: false,
-	// 	slidesToShow: 8,
-	// 	slidesToScroll: 1,
-	// 	variableWidth: true,
-	// 	prevArrow: $('.navbar__arrow_prev'),
-	// 	nextArrow: $('.navbar__arrow_next')
-	// });
 
 	// Mini menu
 	$('.mini__menu_toggle').on('mouseenter', function(event) {
@@ -123,18 +113,17 @@ $(document).ready(function() {
 
 		if (box.hasClass('left__content_hide')) {
 			box.removeClass('left__content_hide');
-			// box.css('marginLeft', 0);
 		} else {
 			box.addClass('left__content_hide');
-			// box.css('marginLeft', -(boxWidth));
 		}
+		mapResize();
 	});
 
     $('.js-draggable').draggable({
-        containment: ".main__content"
+        // containment: ".main__content"
     });
 
-    $('body').on('click', '.content__box .icon-close', function(event) {
+    $('body').on('click touchstart', '.content__box .icon-close', function(event) {
     	event.preventDefault();
     	$(this).closest('.content__box').hide();
     });
@@ -157,20 +146,8 @@ $(document).ready(function() {
 
 function boxDraggable(el) {
     el.draggable({
-        containment: ".main__content"
+        // containment: "body"
     });
-}
-
-function initMap() {
-	var uluru = {lat: -25.363, lng: 131.044};
-	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 4,
-		center: uluru
-	});
-	var marker = new google.maps.Marker({
-		position: uluru,
-		map: map
-	});
 }
 
 function getRandomInt(min, max) {
@@ -179,71 +156,17 @@ function getRandomInt(min, max) {
 
 function setContentBoxPosition(el) {
 	el.offset(function(i, coord){
-	    var  newCoord = {};
-	    newCoord.top = coord.top + getRandomInt(10, 100);
-	    newCoord.left = coord.left + getRandomInt(10, 100);
+	    var  newCoord = [];
+	    if (isXsWidth()) {    	
+		    var coord = $('.wrapper').offset();
+		    newCoord.top = coord.top;
+		    newCoord.left = coord.left;
+	    } else {
+		    var coord = $('.main__content').offset();
+		    newCoord.top = coord.top + getRandomInt(10, 100);
+		    newCoord.left = coord.left + getRandomInt(10, 100);	    	
+	    }
 	    return newCoord;
 	    newCoord = null;
 	});
 }
-
-// function createUnit(unit, isVisible) {
-// 	var miniWindow = '';
-//     if (!$('.content__box_min').length) {
-//         miniWindow =
-//           '<div class="content__box content__box_min js-draggable">'
-//             '<div class="content__box_head">Ford Focus III У 744 РС 777<i class="icon-close"></i></div>'
-//             '<div class="content__box_body">'
-//               '<div class="content__box_map"><img src="img/map-min.jpg" alt=""/></div>'
-//               '<ul class="content__box_list">'
-//                 '<li class="content__box_list-item">'
-//                   '<div class="content__box_list-name">Назначен:</div>'
-//                   '<div class="content__box_list-descr">17.07.2017 - 13:10:33</div>'
-//                 '</li>'
-//                 '<li class="content__box_list-item">'
-//                   '<div class="content__box_list-name">Скорость:</div>'
-//                   '<div class="content__box_list-descr">94</div>'
-//                 '</li>'
-//                 '<li class="content__box_list-item">'
-//                   '<div class="content__box_list-name">Телефон:</div>'
-//                   '<div class="content__box_list-descr">+79217391056</div>'
-//                 '</li>'
-//                 '<li class="content__box_list-item">'
-//                   '<div class="content__box_list-name">Позиция:</div>'
-//                   '<div class="content__box_list-descr">Савинское сельское поселение, РФ</div>'
-//                 '</li>'
-//               '</ul>'
-//               '<ul class="content__box_list">'
-//                 '<li class="content__box_list-item">'
-//                   '<div class="content__box_list-name">Моточасы:</div>'
-//                   '<div class="content__box_list-descr">23</div>'
-//                 '</li>'
-//                 '<li class="content__box_list-item">'
-//                   '<div class="content__box_list-name">Пробег:</div>'
-//                   '<div class="content__box_list-descr">219342.95</div>'
-//                 '</li>'
-//               '</ul>'
-//               '<div class="content__box_chart"><img src="img/chart-min.jpg" alt=""/></div>'
-//             '</div>'
-//           '</div>'
-//         ;
-//     }
-//     var html = '<ul class="within_accordion upd" style="display: '+ (isVisible ? 'block' : 'none') +';">' +
-// 		'<li unit_id="'+ unit.id +'" class="unit_item">' +
-//             '<img class="unit_watch mCS_img_loaded" src="/img/' + getTheme() + '/within_accordion_icon.png" alt="Следить">' +
-//             '<img class="car_icon mCS_img_loaded" src="'+ (unit.unit_icon ? '/img/libauto/' + unit.unit_icon : '/img/car_icon.png' )+'" alt="Сменить иконку">' +
-//             '<span>'+ unit.name +'</span>' +
-//             '<div>' +
-//                 '<a href="#"><img src="/img/' + getTheme() + '/signal_icon.png" alt="" class="mCS_img_loaded signal"></a> ' +
-//                 '<a class="track_last_day" title="Трек за последние сутки" href="#"> ' +
-//                     '<img src="/img/' + getTheme() + '/road_icon.png" alt="Трек за последние сутки" class="mCS_img_loaded">' +
-//                 '</a> ' +
-//                 '<a href="#"><img class="unit_movement" src="/img/' + getTheme() + '/stop_icon.png" alt="" class="mCS_img_loaded"></a> ' +
-//                 miniWindow +
-//                 '<a href="#" class="send_cmd"><img src="/img/' + getTheme() + '/message_icon.png" alt="" class="mCS_img_loaded"></a> ' +
-//             '</div>' +
-// 		'</li>' +
-// 		'</ul>';
-
-// 	return html;
-// }
