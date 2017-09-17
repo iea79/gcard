@@ -130,6 +130,7 @@ input[type=radio] {
     width: 15px;
     margin: 0;
     // border: 1px solid #aaa;
+    outline: 0;
     overflow: hidden;
     // margin-top: -4px;
     vertical-align: middle;
@@ -140,6 +141,11 @@ input[type=radio] {
     position: relative;
     background-color: #009cff;
     @include border-radius(2px);
+}
+
+input[type=checkbox]:focus,
+input[type=radio]:focus {
+    outline: 0;
 }
 
 input[type=radio] {

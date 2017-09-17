@@ -9,13 +9,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/jquery-ui.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
-    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApMGitD0JBNexZOL6VioySmY2NRy-HKLQ"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApMGitD0JBNexZOL6VioySmY2NRy-HKLQ"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/map.js"></script>
     <script src="js/function.js"></script>
   </head>
@@ -45,7 +47,7 @@
               <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-car-statistics"></i><span class="navbar__link_name">Отчёты и графики</span></a></li>
               <li class="navbar__item"><a href="/geoobject.html" class="navbar__link"><i class="gk-icon-car-navigation"></i><span class="navbar__link_name">Геообъекты</span></a></li>
               <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-auto-sound"></i><span class="navbar__link_name">Уведомления</span></a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-signs"></i><span class="navbar__link_name">Маршруты</span></a></li>
+              <li class="navbar__item"><a href="/route.html" class="navbar__link"><i class="gk-icon-signs"></i><span class="navbar__link_name">Маршруты</span></a></li>
               <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-car-driver"></i><span class="navbar__link_name">Водители</span></a></li>
               <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-auto-repair-service"></i><span class="navbar__link_name">Техобслуживание</span></a></li>
             </ul>
@@ -312,6 +314,17 @@
                   </li>
                 </ul>
               </div>
+              <!-- begin pagination -->
+              <ul class="paginations">
+                <li class="prev"><a href="#"></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="next"><a href="#"></a></li>
+              </ul>
+              <!-- end pagination -->
             </div>
             <!-- Tab 2-->
             <div id="2" role="tabpanel" class="tab-pane">
@@ -499,8 +512,20 @@
                   </li>
                 </ul>
               </div>
+              <!-- begin pagination -->
+              <ul class="paginations">
+                <li class="prev"><a href="#"></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="next"><a href="#"></a></li>
+              </ul>
+              <!-- end pagination -->
             </div>
           </div>
+          <footer class="footer">2017 © Global Service</footer>
         </div>
         <div class="left__content_toggle"></div>
       </div>
@@ -759,5 +784,58 @@
       </div>
     </div>
     <!-- end modal modal__create-geozone -->
+    <!-- Button trigger modal modal__create-route -->
+    <!-- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-route") Click to open modal-->
+    <!-- begin Modal modal__create-route -->
+    <div id="modal__create-route" class="modal modal-middle fade modal__create-route">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Доавление маршрута</div>
+          </div>
+          <div class="modal-body">
+            <div class="modal__create-route-point modal__create-route-point--a">
+              <div class="form__row">
+                <div class="form-label">Название</div>
+                <div class="form-field">
+                  <input type="text" placeholder=""/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">Адрес</div>
+                <div class="form-field">
+                  <input type="text" placeholder=""/>
+                </div>
+              </div>
+            </div>
+            <div class="modal__create-route-point modal__create-route-point--b">
+              <div class="form__row">
+                <div class="form-label">Название</div>
+                <div class="form-field">
+                  <input type="text" placeholder=""/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">Адрес</div>
+                <div class="form-field">
+                  <input type="text" placeholder=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__create-route -->
   </body>
 </html>

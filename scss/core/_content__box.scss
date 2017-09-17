@@ -1,20 +1,20 @@
 .content__box {
 	@include box-shadow(0 10px 21px rgba(0, 0, 0, 0.25));
-	background-color: #ffffff;
 	font-size: 13px;
 	color: #333333;
 	position: absolute;
 	z-index: 30;
+	width: 100%;
+	max-width: 94.5%;
+	@include border-radius(6px);
 	&.selected {
 		z-index: 31;
 	}
 	&_min {
 		max-width: 350px;
-		.content__box_head {
-			cursor: move;
-		}
 	}
 	&_head {
+		cursor: move;
 		background-color: #133a63;
 		color: #fff;
 		font-family: "Muller Bold";
@@ -22,6 +22,7 @@
 		text-transform: uppercase;
 		padding: 14px 45px 14px 30px;
 		position: relative;
+		@include border-radius(6px 6px 0 0);
 		.icon-close {
 			cursor: pointer;
 			position: absolute;
@@ -33,6 +34,7 @@
 	}
 	&_body {
 		padding: 22px;
+		background-color: #ffffff;
 	}
 	&_map {
 		margin-bottom: 22px;
@@ -55,4 +57,130 @@
 		}
 	}
 	&_chart {}
+	&-tabs {
+		@extend %clear_a;
+		margin-bottom: 20px;
+		li {
+			display: inline-block;
+			a {
+				padding: 6px 9px;
+				color: #808080;
+				font-size: 12px;
+				display: inline-block;
+				@include border-radius(3px);
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			&.active {
+				a {
+					background-color: #2d6097;
+					color: #fff;
+				}
+			}
+		}
+		&-pane {
+			@extend %clear_a;
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+	}
+	&_wrap {
+		@include box-sizing(content-box);
+		margin-left: -22px;
+		margin-right: -22px;
+		// max-width: 100%;
+		overflow-y: auto;
+		&.scroll-scrollx_visible {
+			padding-bottom: 13px;
+		}
+	}
+	&_footer {
+		color: #fff;
+		padding: 4px 19px;
+		background-color: #1c4d82;
+		margin: 0 -23px -23px -23px;
+		@include border-radius(0 0 6px 6px);
+		&-name {
+			padding: 6px 40px 6px 0;
+			display: inline-block;
+		}
+		.paginations {
+			margin: 0;
+			display: inline-block;
+			vertical-align: middle;
+			li {
+				vertical-align: middle;
+				a {
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+	&_table {
+		border: none;
+		border-collapse: collapse;
+		width: 100%;
+		color: #333333;
+        input:not([type]),
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=url],
+        input[type=search],
+        input[type=tel],
+        input[type=number],
+        input[type=datetime] {
+            padding: 0 5px;
+            line-height: 17px;
+            background-color: #f2f2f2;
+            @include border-radius(0);
+            vertical-align: middle;
+            border: 0;
+            max-width: 199px;
+            &+.icon-filter {
+            	margin-left: 14px;
+            	vertical-align: middle;
+            }
+        }
+        input[type=checkbox] {
+        	margin-right: 12px;
+        	background-color: #cccccc;
+        	&:checked:before {
+        		top: 2px;
+        	}
+        }
+        .icon-sort {
+        	margin-left: 25px;
+        	cursor: pointer;
+        	vertical-align: middle;
+        }
+        th {
+        	background-color: #1c4d82;
+        	color: #fff;
+        	text-transform: uppercase;
+        	font-size: 12px;
+        	font-family: "Muller Medium";
+        	vertical-align: middle;
+        }
+        th,td {
+        	padding: 9px;
+        	&:first-of-type {
+        		padding-left: 19px;
+        	}        	
+        }
+        &_filter {
+        	background-color: #fff;
+        	white-space: nowrap;
+        }
+        tbody {
+        	tr {
+        		&:nth-child(even) {
+        			background-color: #fafafa;
+        		}
+        	}
+        }
+	}
 }

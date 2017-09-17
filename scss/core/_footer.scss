@@ -2,12 +2,17 @@
  ----------------------------------------------------------------------------- */
 .footer {
 	position: relative;
-	height: $footer_height;
-	background: $footer_bg_color;
+	color: #5d97ba;
+	font-size: 12px;
+	padding: 11px 25px 16px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #194574;
+	z-index: 10;
 	@extend %clear_all;
 	.container_center {
-		padding-top: 10px;
-		padding-bottom: 10px;
 	}
 }
 

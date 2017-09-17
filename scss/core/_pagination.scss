@@ -1,30 +1,74 @@
 // Pagination ==================================================================
-.pagination {
-	li {
+.paginations {
+	margin: 20px 0;
+	&>li {
 		display: inline-block;
-		a {
-			display: block;
+		color: #8bb2ca;
+		&>a {
 			text-align: center;
+			line-height: 23px;
+			display: block;
+			min-width: 26px;
+			background-color: transparent;
+			font-size: 13px;
+			color: #8bb2ca;
+			@include border-radius(4px);
+			padding: 0 5px;
+			outline: 0;
+			&.active,&:hover {
+				color: #8bb2ca;
+				border: none;
+				text-decoration: none;
+			}
+			&:hover {
+				color: #fff;
+			}
 		}
-		&.prev, &.next {
+		&.active {
+			background-color: #2d6097;
+			color: #8bb2ca;
+			cursor: default;
+			&:hover {
+				a {
+					color: #8bb2ca;
+					cursor: default;
+				}
+			}
+		}
+		&.prev,&.next,&.prev-more,&.next-more {
 			a {
 				&:before {					
+				}
+				&:hover {
+					opacity: .8;
 				}
 			}
 		}
 		&.prev {
 			a {
 				&:before {
-					content: '<';
-					
+					content: image-url('pag-prev.svg');
+				}
+			}
+			&-more {
+				a {
+					&:before {
+						content: image-url('pag-prev-more.svg');
+					}
 				}
 			}
 		}
 		&.next {
 			a {
 				&:before {
-					content: '>';
-					
+					content: image-url('pag-next.svg');
+				}
+			}
+			&-more {
+				a {
+					&:before {
+						content: image-url('pag-next-more.svg');
+					}
 				}
 			}
 		}

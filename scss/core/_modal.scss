@@ -10,6 +10,11 @@
         width: 0;
         letter-spacing: -1px;
     }
+    &-middle {
+        .modal-dialog {
+            max-width: 400px;
+        }
+    }
     &-open {
     }
     &-close {
@@ -133,7 +138,72 @@
             line-height: 24px;
         }
     }
-
+    &__create {
+        &-route {
+            &-point {
+                position: relative;
+                padding-left: 63px;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 33px;
+                    height: 33px;
+                    line-height: 33px;
+                    text-align: center;
+                    color: #fff;
+                    z-index: 2;
+                    font-size: 13px;
+                    left: 0;
+                    top: 0;
+                    @include border-radius(50%);
+                }
+                &--a {
+                    padding-bottom: 39px;
+                    &:before {
+                        content: 'A';
+                        background-color: #133a63;
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        border: 1px dashed #e6e6e6;
+                        top: 0;
+                        bottom: 0;
+                        left: 16px;
+                        z-index: 0;
+                    }
+                }
+                &--b {
+                    &:before {
+                        content: 'B';
+                        background-color: #f24841;
+                    }
+                }
+            }
+            .btn-confirm {
+                padding-left: 63px;
+            }
+        }
+    }
+    @media (max-width: 425px) {
+        &__create {
+            &-route {
+                &-point {
+                    padding-left: 36px;
+                    &:before {
+                        left: -16px;
+                    }
+                    &:after {
+                        left: 0;
+                    }
+                }
+                .btn-confirm {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
 }
 
 

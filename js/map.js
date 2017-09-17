@@ -6,8 +6,12 @@ function initialize() {
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
 	map = new google.maps.Map(document.getElementById("map"),
-	mapOptions);
+		mapOptions);
 }
+
+// $(document).ready(function($) {
+// 	initialize()
+// });
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function mapResize() {

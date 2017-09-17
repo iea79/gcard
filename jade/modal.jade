@@ -100,3 +100,39 @@
 					div
 						button.btn.btn-primary Сохранить
 // end modal modal__create-geozone 
+
+// Button trigger modal modal__create-route 
+// button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-route") Click to open modal
+// begin Modal modal__create-route 
+.modal.modal-middle.fade.modal__create-route#modal__create-route
+	.modal-dialog
+		.modal-content
+			a(href="#" class="modal-close" data-dismiss="modal")
+			.modal-header
+				.modal-title#myModalLabel Доавление маршрута
+			.modal-body
+				.modal__create-route-point.modal__create-route-point--a
+					.form__row
+						.form-label Название
+						.form-field
+							input(type="text" placeholder="")
+					.form__row
+						.form-label Адрес
+						.form-field
+							input(type="text" placeholder="")
+				.modal__create-route-point.modal__create-route-point--b
+					.form__row
+						.form-label Название
+						.form-field
+							input(type="text" placeholder="")
+					.form__row
+						.form-label Адрес
+						.form-field
+							input(type="text" placeholder="")
+			.modal-footer
+				.btn-confirm
+					div
+						button.btn(data-dismiss="modal") Отменить
+					div
+						button.btn.btn-primary Сохранить
+// end modal modal__create-route 

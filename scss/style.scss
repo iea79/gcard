@@ -82,9 +82,11 @@
 @import "core/pagination";
 @import "core/nav-tabs";
 @import "core/header";
+@import "core/footer";
 @import "core/navbar";
 
 @import "core/dropdown";
+@import "core/jquery.scrollbar";
 
 
 @import "core/mini__menu";
@@ -92,12 +94,14 @@
 @import "core/list__icons";
 @import "core/content__box";
 @import "core/map_box";
+@import "core/route__line";
 
 // Pages
 @import "core/login";
 
 .main__content {
 	overflow: hidden;
+	overflow-y: auto;
 }
 
 /* Header

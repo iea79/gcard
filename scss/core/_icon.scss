@@ -49,6 +49,19 @@
 		top: 6px;
 	}
 }
+.icon-sort {
+	&:before {
+		content: image-url('icon-sort.png');
+	}
+	&-up {
+		@include rotate(18deg);
+	}
+}
+.icon-filter {
+	&:before {
+		content: image-url('icon-filter.png');
+	}
+}
 // .icon-close {
 // 	position: relative;
 // 	height: 15px;

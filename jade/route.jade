@@ -1,0 +1,433 @@
+extends template.jade
+
+block title
+	title Маршруты
+
+block aside
+	ul.nav.nav-tabs.nav-tabs-login(role="tablist")
+		li.active
+			a(href="#1" aria-controls="" role="tab" data-toggle="tab")
+				i.gk-icon-plus(data-toggle="modal" data-target="#modal__create-route")
+				|Маршруты
+
+	.tab-content
+		// Tab 1
+		.tab-pane.active#1(role="tabpanel")
+
+			.panel-heading.panel-heading-icons.panel-heading-route.active
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name(data-content-full-show="cont1") Минск-Смоленск-Москва
+
+			.panel-heading.panel-heading-icons.panel-heading-route
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name(data-content-full-show="cont2") Москва-Рязань
+
+			.panel-heading.panel-heading-icons.panel-heading-route
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name(data-content-full-show="cont3") Москва-Минеральные воды
+
+
+
+block content
+	.content__box#cont1(style="display: none;")
+		.content__box_head Маршрут Минск-Смоленск-Москва
+			i.icon-close
+
+		.content__box_body
+
+			ul.content__box-tabs(role="tablist")
+				li.active
+					a(href="#c1" aria-controls="" role="tab" data-toggle="tab")
+						|Карта
+				li
+					a(href="#c2" aria-controls="" role="tab" data-toggle="tab")
+						|Объекты
+
+			.content__box-tabs-pane.active#c1(role="tabpanel")
+				.route__line
+					.route__line_item(style="color: #2d6097")
+						.route__line_name Минск
+					
+					.route__line_item(style="color: #88d962")
+						.route__line_name Смоленск
+					
+					.route__line_item(style="color: #2d6097")
+						.route__line_name Москва
+
+
+			.content__box-tabs-pane#c2(role="tabpanel")
+				.content__box_wrap.js-scrollbar
+					table.content__box_table
+						thead
+							tr
+								th На маршруте
+								th Название
+									// i.icon-sort.icon-sort-up
+									i.icon-sort
+								th Марка
+								th Госномер
+						tbody
+							tr.content__box_table_filter
+								td
+									input(type="checkbox")
+									|Все
+								td
+									input(type="text")
+									i.icon-filter
+								td
+									input(type="text")
+									i.icon-filter
+								td
+									input(type="text")
+									i.icon-filter
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+
+				.content__box_footer
+					.content__box_footer-name Показаны записи 1-10 из 60
+
+					// begin pagination 
+					ul.paginations
+						li.prev-more
+							a(href="#")
+						li.prev
+							a(href="#")
+						li.active
+							a(href="#") 1
+						li /
+						li
+							a(href="#") 6
+						li.next
+							a(href="#")
+						li.next-more
+							a(href="#")
+					// end pagination 
+						
+
+
+	.content__box#cont2(style="display: none;")
+		.content__box_head Маршрут Москва-Рязань
+			i.icon-close
+
+		.content__box_body
+
+			ul.content__box-tabs(role="tablist")
+				li.active
+					a(href="#c11" aria-controls="" role="tab" data-toggle="tab")
+						|Карта
+				li
+					a(href="#c12" aria-controls="" role="tab" data-toggle="tab")
+						|Объекты
+
+			.content__box-tabs-pane.active#c11(role="tabpanel")
+				.route__line
+					.route__line_item(style="color: #2d6097")
+						.route__line_name Минск
+					
+					.route__line_item(style="color: #88d962")
+						.route__line_name Смоленск
+					
+					.route__line_item(style="color: #2d6097")
+						.route__line_name Москва
+
+
+			.content__box-tabs-pane#c12(role="tabpanel")
+				.content__box_wrap.js-scrollbar
+					table.content__box_table
+						thead
+							tr
+								th На маршруте
+								th Название
+									// i.icon-sort.icon-sort-up
+									i.icon-sort
+								th Марка
+								th Госномер
+						tbody
+							tr.content__box_table_filter
+								td
+									input(type="checkbox")
+									|Все
+								td
+									input(type="text")
+									i.icon-filter
+								td
+									input(type="text")
+									i.icon-filter
+								td
+									input(type="text")
+									i.icon-filter
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+
+				.content__box_footer
+					.content__box_footer-name Показаны записи 1-10 из 60
+
+					// begin pagination 
+					ul.paginations
+						li.prev-more
+							a(href="#")
+						li.prev
+							a(href="#")
+						li.active
+							a(href="#") 1
+						li /
+						li
+							a(href="#") 6
+						li.next
+							a(href="#")
+						li.next-more
+							a(href="#")
+					// end pagination 
+
+	.content__box#cont3(style="display: none;")
+		.content__box_head Маршрут Москва-Минеральные воды
+			i.icon-close
+
+		.content__box_body
+
+			ul.content__box-tabs(role="tablist")
+				li.active
+					a(href="#c21" aria-controls="" role="tab" data-toggle="tab")
+						|Карта
+				li
+					a(href="#c22" aria-controls="" role="tab" data-toggle="tab")
+						|Объекты
+
+			.content__box-tabs-pane.active#c21(role="tabpanel")
+				.route__line
+					.route__line_item(style="color: #2d6097")
+						.route__line_name Минск
+					
+					.route__line_item(style="color: #88d962")
+						.route__line_name Смоленск
+					
+					.route__line_item(style="color: #2d6097")
+						.route__line_name Москва
+
+
+			.content__box-tabs-pane#c22(role="tabpanel")
+				.content__box_wrap.js-scrollbar
+					table.content__box_table
+						thead
+							tr
+								th На маршруте
+								th Название
+									// i.icon-sort.icon-sort-up
+									i.icon-sort
+								th Марка
+								th Госномер
+						tbody
+							tr.content__box_table_filter
+								td
+									input(type="checkbox")
+									|Все
+								td
+									input(type="text")
+									i.icon-filter
+								td
+									input(type="text")
+									i.icon-filter
+								td
+									input(type="text")
+									i.icon-filter
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+							tr
+								td
+									input(type="checkbox")
+								td Agro Crop
+								td Mazda
+								td 7804КЕ-7
+							tr
+								td
+									input(type="checkbox")
+								td Demo DAF CAN
+								td DAF0
+								td 1453-AE-7
+
+				.content__box_footer
+					.content__box_footer-name Показаны записи 1-10 из 60
+
+					// begin pagination 
+					ul.paginations
+						li.prev-more
+							a(href="#")
+						li.prev
+							a(href="#")
+						li.active
+							a(href="#") 1
+						li /
+						li
+							a(href="#") 6
+						li.next
+							a(href="#")
+						li.next-more
+							a(href="#")
+					// end pagination 
+
+block other
