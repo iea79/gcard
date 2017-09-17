@@ -225,7 +225,7 @@ function setContentBoxPosition(el) {
 			    newCoord.left = coord.left + getRandomInt(10, 100);	    	
 		    }	    	
 	    } else {
-		    if (isXsWidth()||isSmWidth()) {    	
+		    if (isXsWidth()) {    	
 			    var coord = $('.wrapper').offset();
 			    newCoord.top = coord.top + 50;
 			    newCoord.left = coord.left;
