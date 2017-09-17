@@ -78,10 +78,8 @@ $(document).ready(function() {
 	});
 
 	$(".header__mobile_menu").swipe( {
-		swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-			if (direction == 'left') {
-				$(this).removeClass('open');
-			}
+		swipeLeft:function(event, direction) {
+			$(this).removeClass('open');
 		}
 	});
 
@@ -128,15 +126,13 @@ $(document).ready(function() {
 	});
 
 	$(".left__content").swipe( {
-		swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-			if (direction == 'left') {
-				$(this).addClass('left__content_hide');
-				mapResize();
-			}
-			if (direction == 'right') {
-				$(this).removeClass('left__content_hide');
-				mapResize();
-			}
+		swipeLeft:function(event, direction) {
+			$(this).addClass('left__content_hide');
+			mapResize();
+		},
+		swipeRight:function(event, direction) {
+			$(this).removeClass('left__content_hide');
+			mapResize();
 		}
 	});
 
@@ -148,7 +144,7 @@ $(document).ready(function() {
         // containment: ".main__content"
     });
 
-    $('body').on('click touchstart', '.content__box .icon-close', function(event) {
+    $('body').on('click touchend', '.content__box .icon-close', function(event) {
     	event.preventDefault();
     	$(this).closest('.content__box').hide();
     });
@@ -231,8 +227,8 @@ function setContentBoxPosition(el) {
 	    } else {
 		    if (isXsWidth()||isSmWidth()) {    	
 			    var coord = $('.wrapper').offset();
-			    newCoord.top = coord.top + 55;
-			    newCoord.left = coord.left +20;
+			    newCoord.top = coord.top + 50;
+			    newCoord.left = coord.left;
 		    } else {
 				var coord = $('.main__content').offset();
 				newCoord.top = coord.top + 5;

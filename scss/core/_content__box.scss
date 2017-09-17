@@ -5,7 +5,7 @@
 	position: absolute;
 	z-index: 30;
 	width: 100%;
-	max-width: 94.5%;
+	max-width: 94%;
 	@include border-radius(6px);
 	&.selected {
 		z-index: 31;
@@ -182,5 +182,8 @@
         		}
         	}
         }
+	}
+	@media (max-width: 767px) {
+		max-width: none;
 	}
 }
