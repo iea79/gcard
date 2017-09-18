@@ -1,0 +1,25 @@
+extends template.jade
+
+block title
+	title Home
+
+block aside
+	ul.nav.nav-tabs.nav-tabs-login(role="tablist")
+		li.active
+			a(href="#1" aria-controls="" role="tab" data-toggle="tab") Треки
+		li
+			a(href="#2" aria-controls="" role="tab" data-toggle="tab") Проигрыватель
+
+
+	.tab-content
+		// Tab 1
+		.tab-pane.active#1(role="tabpanel")
+			//item 1
+
+
+		// Tab 2
+		.tab-pane.active#2(role="tabpanel")
+
+block content
+
+block other

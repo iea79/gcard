@@ -1,0 +1,27 @@
+.bage {
+	@include border-radius(15px);
+	padding: 0 5px;
+	line-height: 20px;
+	height: 18px;
+	min-width: 18px;
+	display: inline-block;
+	background-color: #ff0049;
+	font-size: 11px;
+	font-family: "Muller Bold";
+	color: #ffffff;
+	@include trs(.3);
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+		opacity: .8;
+	}
+	&-info {
+		position: absolute;
+		height: 15px;
+		min-width: 15px;
+		line-height: 17px;
+		right: -10px;
+		top: -8px;
+		font-size: 8px;
+	}
+}

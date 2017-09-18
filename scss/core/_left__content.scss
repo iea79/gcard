@@ -183,6 +183,43 @@
 				}
 				&:hover,&.active {
 					background-color: #2d6097;
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+			&-info {
+				margin-bottom: 3px;
+				text-transform: none;
+				padding-left: 49px;
+				@include border-radius(6px);
+				&:after {
+					display: none;
+				}
+				&:before {
+					content: image-url('icon-info.png');
+					@include rotate(0deg);
+					top: 15px;
+					background-color: transparent;
+				}
+				&:hover,&.active {
+					background-color: #2d6097;
+					color: #fff;
+					text-decoration: none;
+				}
+				.bage {
+					float: right;
+				}
+				.panel-heading-name {
+					font-size: 15px;
+					span {
+						display: block;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+					a {
+						color: #009cff;
+					}
 				}
 			}
 		}

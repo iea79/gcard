@@ -188,7 +188,7 @@ function heightResize() {
 			elHeight=thisHeight;
 		}
 	});
-	console.log(elHeight)
+	// console.log(elHeight)
 	if ($('.main__content').height() != elHeight) {
 		$('.map_box').height(elHeight);
 		mapResize();

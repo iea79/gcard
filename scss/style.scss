@@ -64,6 +64,8 @@
   font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
 // Compass extention 
 @import 'compass/css3';
 @import "core/icon";
@@ -85,6 +87,7 @@
 @import "core/footer";
 @import "core/navbar";
 
+@import "core/bage";
 @import "core/dropdown";
 @import "core/jquery.scrollbar";
 
@@ -102,6 +105,11 @@
 .main__content {
 	overflow: hidden;
 	overflow-y: auto;
+}
+
+.column-number {
+	font-family: 'Open Sans';
+	font-weight: 600;
 }
 
 /* Header

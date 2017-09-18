@@ -13,8 +13,12 @@
 	&_min {
 		max-width: 350px;
 	}
+	&.ui-draggable {
+		.content__box_head {
+			cursor: move;			
+		}
+	}
 	&_head {
-		cursor: move;
 		background-color: #133a63;
 		color: #fff;
 		font-family: "Muller Bold";
@@ -35,6 +39,7 @@
 	&_body {
 		padding: 22px;
 		background-color: #ffffff;
+		overflow: hidden;
 	}
 	&_map {
 		margin-bottom: 22px;
@@ -59,7 +64,7 @@
 	&_chart {}
 	&-tabs {
 		@extend %clear_a;
-		margin-bottom: 20px;
+		margin-bottom: 42px;
 		li {
 			display: inline-block;
 			a {
@@ -89,8 +94,7 @@
 	}
 	&_wrap {
 		@include box-sizing(content-box);
-		margin-left: -22px;
-		margin-right: -22px;
+		margin: -22px -23px 0 -22px;
 		// max-width: 100%;
 		overflow-y: auto;
 		&.scroll-scrollx_visible {
@@ -164,12 +168,19 @@
         	font-size: 12px;
         	font-family: "Muller Medium";
         	vertical-align: middle;
+        	// min-width: 130px;
         }
         th,td {
-        	padding: 9px;
+        	padding: 9px 19px;
+        	// min-width: 130px;
         	&:first-of-type {
-        		padding-left: 19px;
-        	}        	
+        		width: 130px;
+        	}
+        	@media (max-width: 767px) {
+	        	&:first-of-type {
+	        		width: auto;
+	        	}
+        	}
         }
         &_filter {
         	background-color: #fff;

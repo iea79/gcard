@@ -1,0 +1,144 @@
+extends template.jade
+
+block title
+	title Уведомления
+
+block aside
+	ul.nav.nav-tabs.nav-tabs-login(role="tablist")
+		li.active
+			a(href="#1" aria-controls="" role="tab" data-toggle="tab")
+				i.gk-icon-plus(data-toggle="modal" data-target="#modal__create-geozone")
+				|Уведомления
+
+	.tab-content
+		// Tab 1
+		.tab-pane.active#1(role="tabpanel")
+
+			.panel-heading.panel-heading-icons.panel-heading-info.active
+				a(href="#").bage 25
+				.panel-heading-name Все уведомления
+
+			.panel-heading.panel-heading-icons.panel-heading-info
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name(data-content-full-show="cont1")
+					span 1
+					span Потеря связи
+					span Объекты: 
+						a(href="#") Agro Crop, EGTS_19837768445
+
+			.panel-heading.panel-heading-icons.panel-heading-info
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name(data-content-full-show="cont2")
+					span 1
+					span Потеря связи
+					span Объекты: 
+						a(href="#") Agro Crop, EGTS_19837768445
+
+			.panel-heading.panel-heading-icons.panel-heading-info
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name(data-content-full-show="cont3")
+					span 1
+					span Потеря связи
+					span Объекты: 
+						a(href="#") Agro Crop, EGTS_19837768445
+
+			.panel-heading.panel-heading-icons.panel-heading-info
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name(data-content-full-show="cont4")
+					span 1
+					span Потеря связи
+					span Объекты: 
+						a(href="#") Agro Crop, EGTS_19837768445
+
+			.panel-heading.panel-heading-icons.panel-heading-info
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#").icon-settings
+				.panel-heading-name(data-content-full-show="cont5")
+					span 1
+					span Потеря связи
+					span Объекты: 
+						a(href="#") Agro Crop, EGTS_19837768445
+
+block content
+	.content__box#cont1(style="display: none;")
+		.content__box_head Все уведомления
+			i.icon-close
+
+		.content__box_body
+
+			.content__box_wrap.js-scrollbar
+				table.content__box_table
+					thead
+						tr
+							th 
+								span.column-number №
+							th Время
+							th Текст уведомления
+					tbody
+						tr
+							td 1
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Test complex notif! - МКАД, Ржавец, Минск, Беларусь
+						tr
+							td 2
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Превышение скорости jeep широкий в Минске! - МКАД, Ржавец, Минск, Беларусь
+						tr
+							td 3
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Test complex notif! - МКАД, Ржавец, Минск, Беларусь
+						tr
+							td 4
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Превышение скорости jeep широкий в Минске! - МКАД, Ржавец, Минск, Беларусь
+						tr
+							td 5
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Test complex notif! - МКАД, Ржавец, Минск, Беларусь
+						tr
+							td 6
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Превышение скорости jeep широкий в Минске! - МКАД, Ржавец, Минск, Беларусь
+						tr
+							td 7
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Test complex notif! - МКАД, Ржавец, Минск, Беларусь
+						tr
+							td 8
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Превышение скорости jeep широкий в Минске! - МКАД, Ржавец, Минск, Беларусь
+						tr
+							td 9
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Test complex notif! - МКАД, Ржавец, Минск, Беларусь
+						tr
+							td 10
+							td 16/07/2017&nbsp;00:00:00
+							td Jeep Широкий!!: 2017-07-16 16:02:22 Превышение скорости jeep широкий в Минске! - МКАД, Ржавец, Минск, Беларусь
+
+			.content__box_footer
+				.content__box_footer-name Показаны записи 1-10 из 1,197
+
+				// begin pagination 
+				ul.paginations
+					li.prev-more
+						a(href="#")
+					li.prev
+						a(href="#")
+					li.active
+						a(href="#") 125
+					li /
+					li
+						a(href="#") 197
+					li.next
+						a(href="#")
+					li.next-more
+						a(href="#")
+				// end pagination 
+						
+
+block other

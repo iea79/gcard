@@ -57,9 +57,16 @@
 		@include rotate(18deg);
 	}
 }
+
 .icon-filter {
 	&:before {
 		content: image-url('icon-filter.png');
+	}
+}
+
+.icon-info {
+	&:before {
+		content: image-url('icon-info.png');
 	}
 }
 // .icon-close {
