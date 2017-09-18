@@ -18,6 +18,8 @@
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script src="js/jquery.scrollbar.min.js"></script>
     <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/map.js"></script>
     <script src="js/function.js"></script>
   </head>
@@ -115,11 +117,102 @@
           <div class="tab-content">
             <!-- Tab 1-->
             <div id="1" role="tabpanel" class="tab-pane active">
-              <!--item 1-->
-              
+              <div class="panel-body panel-body-pad">
+                <div class="form__row form__row_inline">
+                  <div class="form-label">Объект</div>
+                  <div class="form__field">
+                    <select data-placeholder="Все">
+                      <option value=""></option>
+                      <option value="1">Item 1</option>
+                      <option value="2">Item 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body panel-body-pad">
+                <ul role="tablist" class="left__content_tabs">
+                  <li class="active"><a href="" aria-controls="" role="tab" data-toggle="tab">Час</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">День</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Неделя</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Месяц</a></li>
+                </ul>
+                <div class="date__range">
+                  <div class="date__range_item">
+                    <input type="text" placeholder="12.07.2017 00:00" class="datetime"/>
+                  </div>
+                  <div class="date__range_item">
+                    <input type="text" placeholder="13.07.2017 00:00" class="datetime"/>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body panel-body-pad">
+                <div class="form__row form__row_inline track__slide_wrap">
+                  <div class="form-label">Ширина трека</div>
+                  <div class="form__field">
+                    <div class="track__slide"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body panel-body-pad">
+                <ul role="tablist" class="left__content_tabs">
+                  <li class="active"><a href="" aria-controls="" role="tab" data-toggle="tab">Однотонный</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Датчик</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Скорость</a></li>
+                </ul>
+                <div class="color__box">
+                  <div style="background-color: #006baf" class="color__box_item color__box_item-circle"></div>
+                </div>
+              </div>
+              <div class="panel-body panel-body-pad left__content_checkbox">
+                <div class="grid grid__2">
+                  <div class="grid__wrapper">
+                    <input type="checkbox"/>
+                    <div class="form-label">Стоянки/ Остановки</div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <input type="checkbox"/>
+                    <div class="form-label">Контрольные точки</div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn">Очистить</button>
+              <button class="btn btn-primary">Построить</button>
             </div>
             <!-- Tab 2-->
-            <div id="2" role="tabpanel" class="tab-pane active"></div>
+            <div id="2" role="tabpanel" class="tab-pane">
+              <div class="player__box">
+                <div class="player__box_column">
+                  <div class="player__box_title">Зажигание</div>
+                  <div class="player__box_item">
+                    <div style="background-color: #81da62;" class="player__box_color player__box_color-dot"></div>
+                    <div class="player__box_item_name">Да</div>
+                  </div>
+                  <div class="player__box_item">
+                    <div style="background-color: #da6262;" class="player__box_color player__box_color-dot"></div>
+                    <div class="player__box_item_name">Нет</div>
+                  </div>
+                  <div class="player__box_item">
+                    <div style="background-color: #b3b3b3;" class="player__box_color player__box_color-dot"></div>
+                    <div class="player__box_item_name">Нет данных</div>
+                  </div>
+                </div>
+                <div class="player__box_column">
+                  <div class="player__box_title">Превышение</div>
+                  <div class="player__box_item">
+                    <div style="background-color: #fff794;" class="player__box_color"></div>
+                    <div class="player__box_item_name">> 1 км/ч</div>
+                  </div>
+                  <div class="player__box_item">
+                    <div style="background-color: #f27341;" class="player__box_color"></div>
+                    <div class="player__box_item_name">> 10 км/ч</div>
+                  </div>
+                  <div class="player__box_item">
+                    <div style="background-color: #ff0000;" class="player__box_color"></div>
+                    <div class="player__box_item_name">> 20 км/ч</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <footer class="footer">2017 © Global Service</footer>
         </div>

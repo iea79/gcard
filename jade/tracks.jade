@@ -14,11 +14,87 @@ block aside
 	.tab-content
 		// Tab 1
 		.tab-pane.active#1(role="tabpanel")
-			//item 1
+			.panel-body.panel-body-pad
+				.form__row.form__row_inline
+					.form-label Объект
+					.form__field
+						select(data-placeholder="Все")
+							option(value="")
+							option(value="1") Item 1
+							option(value="2") Item 2
 
+			.panel-body.panel-body-pad
+				ul.left__content_tabs(role="tablist")
+					li.active
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Час
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") День
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Неделя
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Месяц
+				.date__range
+					.date__range_item
+						input.datetime(type="text" placeholder="12.07.2017 00:00")
+					.date__range_item
+						input.datetime(type="text" placeholder="13.07.2017 00:00")
 
+			.panel-body.panel-body-pad
+				.form__row.form__row_inline.track__slide_wrap
+					.form-label Ширина трека
+					.form__field
+						.track__slide
+
+			.panel-body.panel-body-pad
+				ul.left__content_tabs(role="tablist")
+					li.active
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Однотонный
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Датчик
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Скорость
+				.color__box
+					.color__box_item.color__box_item-circle(style="background-color: #006baf")
+
+			.panel-body.panel-body-pad.left__content_checkbox
+				.grid.grid__2
+					.grid__wrapper
+						input(type="checkbox")
+						.form-label Стоянки/ Остановки
+					.grid__wrapper
+						input(type="checkbox")
+						.form-label Контрольные точки
+
+			button.btn Очистить
+			button.btn.btn-primary Построить
+				
+
+						
 		// Tab 2
-		.tab-pane.active#2(role="tabpanel")
+		.tab-pane#2(role="tabpanel")
+			.player__box
+				.player__box_column
+					.player__box_title Зажигание
+					.player__box_item
+						.player__box_color.player__box_color-dot(style="background-color: #81da62;")
+						.player__box_item_name Да
+					.player__box_item
+						.player__box_color.player__box_color-dot(style="background-color: #da6262;")
+						.player__box_item_name Нет
+					.player__box_item
+						.player__box_color.player__box_color-dot(style="background-color: #b3b3b3;")
+						.player__box_item_name Нет данных
+				.player__box_column
+					.player__box_title Превышение
+					.player__box_item
+						.player__box_color(style="background-color: #fff794;")
+						.player__box_item_name > 1 км/ч
+					.player__box_item
+						.player__box_color(style="background-color: #f27341;")
+						.player__box_item_name > 10 км/ч
+					.player__box_item
+						.player__box_color(style="background-color: #ff0000;")
+						.player__box_item_name > 20 км/ч
 
 block content
 

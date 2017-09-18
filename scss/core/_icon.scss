@@ -2,8 +2,17 @@
 [class^="icon-"], [class*="icon-"] {
 	display: inline-block;
 	&:before {
-		content: '';
+		// content: '';
 	}
+}
+
+.icon-logout {
+	background: image-url('logout.svg') no-repeat center center;
+	background-size: contain;
+	width: 13px;
+	height: 11px;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .icon-list-cell {
@@ -69,24 +78,15 @@
 		content: image-url('icon-info.png');
 	}
 }
-// .icon-close {
-// 	position: relative;
-// 	height: 15px;
-// 	&:before,&:after {
-// 		content: '';
-// 		width: 3px;
-// 		height: 15px;
-// 		display: block;
-// 		position: absolute;
-// 		top: 0;
-// 		right: 6px;
-// 		background-color: #6995b7;
-// 		@include border-radius(1px);
-// 	}
-// 	&:before {
-// 		@include rotate(45deg);
-// 	}
-// 	&:after {
-// 		@include rotate(-45deg);
-// 	}
-// }
+
+.icon-info {
+	&:before {
+		content: image-url('icon-info.png');
+	}
+}
+
+.icon-calendar {
+	&:before {
+		content: image-url('icon-calendar.png');
+	}
+}

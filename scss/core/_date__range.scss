@@ -1,0 +1,36 @@
+.date__range {
+	margin-left: -11px;
+	@extend %clear_a;
+	&_item {
+		float: left;
+		width: 50%;
+		padding-left: 11px;
+		position: relative;
+		// .icon-calendar {
+		// 	position: absolute;
+		// }
+		input {
+			font-size: 12px;
+			padding: 10px 30px 8px 16px;
+			background: url('../img/icon-calendar.png') right 12px center no-repeat;
+		}
+	}
+	@media (max-width: 1199px) {
+		&_item {
+			input {
+				background: url('../img/icon-calendar.png') right 9px center no-repeat;
+				padding: 11px 25px 10px 10px;
+				font-size: 11px;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		&_item {
+			input {
+				background: url('../img/icon-calendar.png') right 6px center no-repeat;
+				padding: 11px 25px 10px 10px;
+				font-size: 10px;
+			}
+		}
+	}
+}

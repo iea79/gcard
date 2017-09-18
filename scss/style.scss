@@ -89,6 +89,7 @@
 
 @import "core/bage";
 @import "core/dropdown";
+@import "core/bootstrap-datetimepicker";
 @import "core/jquery.scrollbar";
 
 
@@ -98,6 +99,9 @@
 @import "core/content__box";
 @import "core/map_box";
 @import "core/route__line";
+@import "core/ui-slider";
+@import "core/date__range";
+@import "core/track";
 
 // Pages
 @import "core/login";
@@ -112,40 +116,39 @@
 	font-weight: 600;
 }
 
-/* Header
- ----------------------------------------------------------------------------- */
 
-.icon-logout {
-	background: image-url('logout.svg') no-repeat center center;
-	background-size: contain;
-	width: 13px;
-	height: 11px;
-	display: inline-block;
-	vertical-align: middle;
-}
 
-.logo {
-	float: left;
-	display: block;
-	margin: 12px 0 14px 38px;
-	@media (max-width: 1279px) {
-		margin: 12px 0 14px 20px;
+
+
+.player__box {
+	@extend %clear_a;
+	&_column {
+		float: left;
+		padding-right: 40px;
 	}
-	@media (max-width: 1199px) {
-		width: 40px;
-		overflow: hidden;
-		margin-right: 20px;
-		img {
-			max-width: none;
+	&_title {
+		font-family: "Muller Bold";
+		margin-bottom: 10px;
+	}
+	&_item {
+		margin-bottom: 7px;
+		&_name {
+			display: inline-block;
+			vertical-align: middle;
 		}
 	}
-}
-
-// stiky menu
-.stiky {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+	&_color {
+		display: inline-block;
+		vertical-align: middle;
+		width: 26px;
+		height: 16px;
+		@include border-radius(2px);
+		margin-right: 10px;
+		&-dot {
+			width: 8px;
+			height: 8px;
+			@include border-radius(50%);
+		}
+	}
 }
 

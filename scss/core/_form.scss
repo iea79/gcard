@@ -242,6 +242,7 @@ Buttons
                 border-color: $color_el_bg;
                 background-color: $color_el_bg;
                 color: $btn_contrast_text_color;
+                @include text-shadow(none);
             }
         }
     }   

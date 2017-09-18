@@ -2,7 +2,8 @@ var TempApp = {
     lgWidth: 1200,
     mdWidth: 992,
     smWidth: 768,
-    iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }
+    iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+    touchDevice: function() { return navigator.userAgent.match(/iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile/i); }
 };
 
 function isLgWidth() { return $(window).width() >= TempApp.lgWidth; } // >= 1200
@@ -10,6 +11,7 @@ function isMdWidth() { return $(window).width() >= TempApp.mdWidth && $(window).
 function isSmWidth() { return $(window).width() >= TempApp.smWidth && $(window).width() < TempApp.mdWidth; } // >= 768 && < 992
 function isXsWidth() { return $(window).width() < TempApp.smWidth; } // < 768
 function isIOS() { return TempApp.iOS(); } // for iPhone iPad iPod
+function isTouch() { return TempApp.touchDevice(); } // for touch device
 
 $(document).ready(function() {
 
@@ -77,11 +79,13 @@ $(document).ready(function() {
 		$('.header__mobile_menu').toggleClass('open');
 	});
 
-	$(".header__mobile_menu").swipe( {
-		swipeLeft:function(event, direction) {
-			$(this).removeClass('open');
-		}
-	});
+	if (isTouch()) {
+		$(".header__mobile_menu").swipe( {
+			swipeLeft:function(event, direction) {
+				$(this).removeClass('open');
+			}
+		});
+	}
 
 	// Mini menu
 	$('.mini__menu_toggle').on('mouseenter', function(event) {
@@ -125,16 +129,18 @@ $(document).ready(function() {
 		mapResize();
 	});
 
-	$(".left__content").swipe( {
-		swipeLeft:function(event, direction) {
-			$(this).addClass('left__content_hide');
-			mapResize();
-		},
-		swipeRight:function(event, direction) {
-			$(this).removeClass('left__content_hide');
-			mapResize();
-		}
-	});
+	if (isTouch()) {
+		$(".left__content").swipe( {
+			swipeLeft:function(event, direction) {
+				$(this).addClass('left__content_hide');
+				mapResize();
+			},
+			swipeRight:function(event, direction) {
+				$(this).removeClass('left__content_hide');
+				mapResize();
+			}
+		});
+	}
 
 	if (isXsWidth()||isSmWidth()) {
 		$('.left__content').addClass('left__content_hide');
@@ -173,10 +179,29 @@ $(document).ready(function() {
 
     $('.js-scrollbar').scrollbar();
 
-    // setInterval(function() {
-    	heightResize();
-    // }, 500);
+    $('.datetime').datetimepicker({
+        // locale: 'ru',
+        format: 'DD.MM.YYYY hh:mm',
+        useCurrent: false,
+        focusOnShow: false,
+        ignoreReadonly: true,
+        allowInputToggle: true,
+        useCurrent: false,
+        // debug: true
+    });
 
+
+    $( '.track__slide' ).slider({
+		range: "min",
+		min: 1,
+		max: 10,
+		value: 1,
+		slide: function( event, ui ) {
+			$('.ui-slider-bage').html( ui.value );
+		}
+    });
+	$('.ui-slider-handle').append('<span class="ui-slider-bage" />')
+    $('.ui-slider-bage').html($('.track__slide').slider('value'));
 });
 
 function heightResize() {

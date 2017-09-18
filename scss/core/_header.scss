@@ -115,3 +115,21 @@
 		}
 	}
 }
+
+.logo {
+	float: left;
+	display: block;
+	margin: 12px 0 14px 38px;
+	@media (max-width: 1279px) {
+		margin: 12px 0 14px 20px;
+	}
+	@media (max-width: 1199px) {
+		width: 40px;
+		overflow: hidden;
+		margin-right: 20px;
+		img {
+			max-width: none;
+		}
+	}
+}
+
