@@ -33,6 +33,12 @@
 	}
 }
 
+.icon-send {
+	&:before {
+		content: image-url('icon-send.png');
+	}
+}
+
 .icon-list-round {
 	vertical-align: middle;
 	margin-right: 10px;

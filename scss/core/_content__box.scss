@@ -51,6 +51,33 @@
 		padding: 22px;
 		background-color: #ffffff;
 		overflow: hidden;
+		&_top {
+			@extend %clear_a;
+			margin-top: -5px;
+			padding-bottom: 40px;
+			.form {
+				&__row {
+					max-width: 400px;
+				}
+				&-label {
+					float: left;
+					padding-right: 18px;
+					margin: 8px 0;
+					font-size: 18px;
+					font-family: "Muller Bold";
+					color: #133a63;
+				}
+				&__field {
+					overflow: hidden;
+					.select2 {
+						display: block;
+						&-selection--single {
+							border: 2px solid #e6e6e6;
+						}
+					}
+				}
+			}
+		}
 	}
 	&_map {
 		margin-bottom: 22px;
@@ -108,9 +135,12 @@
 		margin: -22px -23px 0 -22px;
 		// max-width: 100%;
 		overflow-y: auto;
-		min-height: 350px;
+		// min-height: 350px;
 		&.scroll-scrollx_visible {
 			padding-bottom: 13px;
+		}
+		&.scroll-wrapper {
+			// width: 100%;
 		}
 	}
 	&_footer {

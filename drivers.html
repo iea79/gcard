@@ -111,17 +111,105 @@
       <div class="left__content js_full_height">			
         <div class="left__content_wrap">
           <ul role="tablist" class="nav nav-tabs nav-tabs-login">
-            <li class="active"><a href="#1" aria-controls="" role="tab" data-toggle="tab">Группы</a></li>
-            <li><a href="#2" aria-controls="" role="tab" data-toggle="tab">Объекты</a></li>
+            <li class="active"><a href="#1" aria-controls="" role="tab" data-toggle="tab"><i data-toggle="modal" data-target="#modal__create-driver" class="gk-icon-plus"></i>Водители</a></li>
           </ul>
           <div class="tab-content">
             <!-- Tab 1-->
             <div id="1" role="tabpanel" class="tab-pane active">
               <!--item 1-->
-              
+              <div data-toggle="collapse" data-target="#p1" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" data-toggle="modal" data-target="#modal__add_reports" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__driver-place" class="icon-send"></a>
+                <div class="panel-heading-name panel-heading-name--normal">Максимов Андрей</div>
+              </div>
+              <div id="p1" style="height:0;" class="panel-body panel-body-pad collapse">
+                <div class="panel-body-title">Оценка качества вождения</div>
+                <ul role="tablist" class="left__content_tabs">
+                  <li class="active"><a href="" aria-controls="" role="tab" data-toggle="tab">Час</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">День</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Неделя</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Месяц</a></li>
+                </ul>
+                <div class="form__row date__range">
+                  <div class="date__range_item">
+                    <input type="text" placeholder="12.07.2017 00:00" class="datetime"/>
+                  </div>
+                  <div class="date__range_item">
+                    <input type="text" placeholder="13.07.2017 00:00" class="datetime"/>
+                  </div>
+                </div>
+                <div class="form__row max__speed">
+                  <div class="form-label">Максимальная скорость, км/ч</div>
+                  <div class="form__field">
+                    <input type="text" value="100"/>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <button class="btn">Очистить</button>
+                  <button data-content-full-show="cont1" class="btn btn-primary">Построить</button>
+                </div>
+              </div>
+              <!--item 2-->
+              <div data-toggle="collapse" data-target="#p2" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" data-toggle="modal" data-target="#modal__add_reports" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__driver-place" class="icon-send"></a>
+                <div class="panel-heading-name panel-heading-name--normal">Стоянов Виктор</div>
+              </div>
+              <div id="p2" style="height:0;" class="panel-body panel-body-pad collapse">
+                <div class="panel-body-title">Оценка качества вождения</div>
+                <ul role="tablist" class="left__content_tabs">
+                  <li class="active"><a href="" aria-controls="" role="tab" data-toggle="tab">Час</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">День</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Неделя</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Месяц</a></li>
+                </ul>
+                <div class="form__row date__range">
+                  <div class="date__range_item">
+                    <input type="text" placeholder="12.07.2017 00:00" class="datetime"/>
+                  </div>
+                  <div class="date__range_item">
+                    <input type="text" placeholder="13.07.2017 00:00" class="datetime"/>
+                  </div>
+                </div>
+                <div class="form__row max__speed">
+                  <div class="form-label">Максимальная скорость, км/ч</div>
+                  <div class="form__field">
+                    <input type="text" value="100"/>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <button class="btn">Очистить</button>
+                  <button data-content-full-show="cont2" class="btn btn-primary">Построить</button>
+                </div>
+              </div>
+              <!--item 3-->
+              <div data-toggle="collapse" data-target="#p3" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" data-toggle="modal" data-target="#modal__add_reports" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__driver-place" class="icon-send"></a>
+                <div class="panel-heading-name panel-heading-name--normal">Максимов Андрей</div>
+              </div>
+              <div id="p3" style="height:0;" class="panel-body panel-body-pad collapse">
+                <div class="panel-body-title">Оценка качества вождения</div>
+                <ul role="tablist" class="left__content_tabs">
+                  <li class="active"><a href="" aria-controls="" role="tab" data-toggle="tab">Час</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">День</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Неделя</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Месяц</a></li>
+                </ul>
+                <div class="form__row date__range">
+                  <div class="date__range_item">
+                    <input type="text" placeholder="12.07.2017 00:00" class="datetime"/>
+                  </div>
+                  <div class="date__range_item">
+                    <input type="text" placeholder="13.07.2017 00:00" class="datetime"/>
+                  </div>
+                </div>
+                <div class="form__row max__speed">
+                  <div class="form-label">Максимальная скорость, км/ч</div>
+                  <div class="form__field">
+                    <input type="text" value="100"/>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <button class="btn">Очистить</button>
+                  <button data-content-full-show="cont3" class="btn btn-primary">Построить</button>
+                </div>
+              </div>
             </div>
-            <!-- Tab 2-->
-            <div id="2" role="tabpanel" class="tab-pane active"></div>
           </div>
           <footer class="footer">2017 © Global Service</footer>
         </div>
@@ -131,6 +219,142 @@
       <!-- begin main__content-->
       <main class="main__content js_full_height">
         <div id="map" class="map_box"></div>
+        <div id="cont1" style="display: none;" class="content__box">
+          <div class="content__box_head">Максимов Андрей<i class="icon-close"></i><i class="icon-minus"></i></div>
+          <div class="content__box_slide_wrap">
+            <div class="content__box_body">
+              <!-- begin grid__driver-->
+              <div class="grid grid__driver">
+                <div class="grid__wrapper">
+                  <div class="grid__driver_head">Диаграмма нарушений</div>
+                  <div class="grid__driver_body">
+                    <div class="grid__driver_chart"><img src="img/diagramm.png" alt=""/></div>
+                    <div class="grid__driver_chart_legend column">
+                      <div class="grid__driver_chart_legend-item">
+                        <div style="background-color: #f24841;" class="grid__driver_chart_legend-color"></div>Скорость более 100 км/ч
+                      </div>
+                      <div class="grid__driver_chart_legend-item">
+                        <div style="background-color: #f2b641;" class="grid__driver_chart_legend-color"></div>Опасное маневрирование
+                      </div>
+                      <div class="grid__driver_chart_legend-item">
+                        <div style="background-color: #be0082;" class="grid__driver_chart_legend-color"></div>Резкое торможение/ускорение
+                      </div>
+                      <div class="grid__driver_chart_legend-item">
+                        <div style="background-color: #7900be;" class="grid__driver_chart_legend-color"></div>Процентное соотношение ночной езды
+                      </div>
+                      <div class="grid__driver_chart_legend-item">
+                        <div style="background-color: #88d962;" class="grid__driver_chart_legend-color"></div>Процентное соотношение езды в городе
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid__wrapper">
+                  <div class="grid__driver_head">Статистика нарушений</div>
+                  <div class="grid__driver_body">
+                    <!-- begin grid__driver_stat-->
+                    <div class="grid grid__2 grid__driver_stat">
+                      <div class="grid__wrapper">
+                        <div class="grid__count">18</div>
+                        <div class="grid__text">Среднее количество нарушений в час</div>
+                      </div>
+                      <div class="grid__wrapper">
+                        <div class="grid__count">3</div>
+                        <div class="grid__text">Среднее количество нарушений на 10 км пути</div>
+                      </div>
+                      <div class="grid__wrapper">
+                        <div class="grid__count">5</div>
+                        <div class="grid__text">Общее количество нарушений</div>
+                      </div>
+                    </div>
+                    <!-- end grid__driver_stat-->
+                  </div>
+                  <div class="grid__driver_foot">Качество вождения:
+                    <div class="grid__driver_foot_result">нормально</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end grid__driver
+              
+              
+              -->
+            </div>
+          </div>
+          <div class="content__box_head">Отчёт — Исходные данные<i class="icon-close"></i><i class="icon-minus"></i></div>
+          <div class="content__box_slide_wrap">
+            <div class="content__box_body">
+              <div class="content__box_body_top">
+                <div class="form__row">
+                  <div class="form-label">Нарушения</div>
+                  <div class="form__field">
+                    <select>
+                      <option value="">Все</option>
+                      <option value="">Не все</option>
+                      <option value="">Ещё</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="content__box_wrap js-scrollbar">
+                <table class="content__box_table">
+                  <thead>
+                    <tr>
+                      <th>Нарушение</th>
+                      <th>Скорость, км/ч</th>
+                      <th>Время начала манёвра</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Опасное&nbsp;маневрирование</td>
+                      <td>110</td>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                    </tr>
+                    <tr>
+                      <td>Опасное маневрирование</td>
+                      <td>110</td>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                    </tr>
+                    <tr>
+                      <td>Опасное маневрирование</td>
+                      <td>110</td>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                    </tr>
+                    <tr>
+                      <td>Опасное маневрирование</td>
+                      <td>110</td>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                    </tr>
+                    <tr>
+                      <td>Превышение скорости</td>
+                      <td>110</td>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                    </tr>
+                    <tr>
+                      <td>Превышение скорости</td>
+                      <td>110</td>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="content__box_footer">
+                <div class="content__box_footer-name">Показаны записи 1-11 из 1,197</div>
+                <!-- begin pagination -->
+                <ul class="paginations">
+                  <li class="prev-more"><a href="#"></a></li>
+                  <li class="prev"><a href="#"></a></li>
+                  <li class="active"><a href="#">125</a></li>
+                  <li>/</li>
+                  <li><a href="#">197</a></li>
+                  <li class="next"><a href="#"></a></li>
+                  <li class="next-more"><a href="#"></a></li>
+                </ul>
+                <!-- end pagination -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <!-- Modals-->
@@ -409,5 +633,154 @@
       </div>
     </div>
     <!-- end modal modal__add_reports -->
+    <!-- Button trigger modal modal__create-driver -->
+    <!-- begin Modal modal__create-driver -->
+    <div id="modal__create-driver" class="modal modal-large fade modal__create-driver">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Водитель</div>
+          </div>
+          <div class="modal-body">
+            <div class="grid grid__2">
+              <div class="grid__wrapper">
+                <div class="form__row">
+                  <div class="form-label">Имя</div>
+                  <div class="form-field">
+                    <input type="text" value="Сергей"/>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__wrapper">
+                <div class="form__row">
+                  <div class="form-label">Телефон</div>
+                  <div class="form-field">
+                    <input type="tel" value="+7 900 910 06 40"/>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__wrapper">
+                <div class="form__row">
+                  <div class="form-label">Табельный номер</div>
+                  <div class="form-field">
+                    <input type="text" value="23"/>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__wrapper">
+                <div class="grid grid__2">
+                  <div class="grid__wrapper">
+                    <div class="form__row">
+                      <div class="form-label">Ключ 1</div>
+                      <div class="form-field">
+                        <input type="text" value="23"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="form__row">
+                      <div class="form-label">Ключ 2</div>
+                      <div class="form-field">
+                        <input type="text" value="23"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Описание</div>
+              <div class="form-field">
+                <textarea></textarea>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Фото</div>
+              <div class="form-field">
+                <div class="file_upload">
+                  <button class="btn">Прикрепить</button>
+                  <div>Файл не выбран</div>
+                  <input type="file"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm float-right">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__create-driver -->
+    <!-- Button trigger modal modal__driver-place -->
+    <!-- begin Modal modal__driver-place -->
+    <div id="modal__driver-place" class="modal modal-xlarge fade modal__driver-place">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Название модали</div>
+          </div>
+          <div class="modal-body">
+            <table class="content__box_table form__row">
+              <thead>
+                <tr>
+                  <th>Объект</th>
+                  <th>Время назначения на объект</th>
+                  <th>Время снятия с объекта</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jeep Широкий</td>
+                  <td>01.01.2017 00:00</td>
+                  <td>31.12.2017 00:00</td>
+                  <td>
+                    <div class="delete__link"><i class="icon-close"> </i>Удалить</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jeep Широкий</td>
+                  <td>01.01.2017 00:00</td>
+                  <td>31.12.2017 00:00</td>
+                  <td>
+                    <div class="delete__link"><i class="icon-close"> </i>Удалить</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jeep Широкий</td>
+                  <td>01.01.2017 00:00</td>
+                  <td>31.12.2017 00:00</td>
+                  <td>
+                    <div class="delete__link"><i class="icon-close"> </i>Удалить</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="form__row">
+              <button class="btn btn-primary">Добавить</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm float-right">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__driver-place -->
   </body>
 </html>

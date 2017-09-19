@@ -83,6 +83,9 @@
 			&-name {
 				overflow: hidden;
 				text-overflow: ellipsis;
+				&--normal {
+					text-transform: none;
+				}
 			}
 			.count {
 				font-size: 15px;
@@ -162,6 +165,10 @@
 						text-decoration: none;
 					}
 				}
+				.icon-send {
+					width: 18px;
+					margin-top: 1px;
+				}
 			}
 			&>.gk-icon-plus {
 				margin-right: 10px;
@@ -237,13 +244,19 @@
 			@include border-radius(6px);
 			@include trs(.2);
 			&-pad {
-				padding-left: 23px;
-				padding-right: 23px;
+				padding-left: 23px !important;
+				padding-right: 23px !important;
 			}
 			&.in {
 				padding: 18px 10px;
 				margin-bottom: 17px;
 				@include border-radius(0 0 6px 6px);
+			}
+			&-title {
+				font-family: "Muller Medium";
+				font-size: 14px;
+				text-transform: uppercase;
+				margin-bottom: 27px;
 			}
 		}
 	}
@@ -306,6 +319,25 @@
 					}
 					&__field {
 						overflow: hidden;
+					}
+				}
+			}
+			&.max__speed {
+				.form {
+					&-label {
+						float: left;
+						margin: 9px 15px 9px 0;
+						padding-left: 0;
+						width: 70%;
+						@media (max-width: 767px) {
+							margin-right: 5px;
+							width: 75%;
+						}
+					}
+					&__field {
+						overflow: hidden;
+						input {
+						}
 					}
 				}
 			}

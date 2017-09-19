@@ -6,19 +6,226 @@ block title
 block aside
 	ul.nav.nav-tabs.nav-tabs-login(role="tablist")
 		li.active
-			a(href="#1" aria-controls="" role="tab" data-toggle="tab") Группы
-		li
-			a(href="#2" aria-controls="" role="tab" data-toggle="tab") Объекты
+			a(href="#1" aria-controls="" role="tab" data-toggle="tab")
+				i.gk-icon-plus(data-toggle="modal" data-target="#modal__create-driver")
+				|Водители
 
 	.tab-content
 		// Tab 1
 		.tab-pane.active#1(role="tabpanel")
 			//item 1
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p1")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#" data-toggle="modal" data-target="#modal__add_reports").icon-settings
+				a(href="#" data-toggle="modal" data-target="#modal__driver-place").icon-send
+				.panel-heading-name.panel-heading-name--normal Максимов Андрей
 
+			.panel-body.panel-body-pad.collapse#p1(style="height:0;")
+				.panel-body-title Оценка качества вождения
 
-		// Tab 2
-		.tab-pane.active#2(role="tabpanel")
+				ul.left__content_tabs(role="tablist")
+					li.active
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Час
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") День
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Неделя
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Месяц
+				.form__row.date__range
+					.date__range_item
+						input.datetime(type="text" placeholder="12.07.2017 00:00")
+					.date__range_item
+						input.datetime(type="text" placeholder="13.07.2017 00:00")
+				.form__row.max__speed
+					.form-label Максимальная скорость, км/ч
+					.form__field
+						input(type="text" value="100")
+				.form__row
+					button.btn Очистить
+					button.btn.btn-primary(data-content-full-show="cont1") Построить
+
+			//item 2
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p2")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#" data-toggle="modal" data-target="#modal__add_reports").icon-settings
+				a(href="#" data-toggle="modal" data-target="#modal__driver-place").icon-send
+				.panel-heading-name.panel-heading-name--normal Стоянов Виктор
+
+			.panel-body.panel-body-pad.collapse#p2(style="height:0;")
+				.panel-body-title Оценка качества вождения
+
+				ul.left__content_tabs(role="tablist")
+					li.active
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Час
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") День
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Неделя
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Месяц
+				.form__row.date__range
+					.date__range_item
+						input.datetime(type="text" placeholder="12.07.2017 00:00")
+					.date__range_item
+						input.datetime(type="text" placeholder="13.07.2017 00:00")
+				.form__row.max__speed
+					.form-label Максимальная скорость, км/ч
+					.form__field
+						input(type="text" value="100")
+				.form__row
+					button.btn Очистить
+					button.btn.btn-primary(data-content-full-show="cont2") Построить
+
+			//item 3
+			.panel-heading.panel-heading-icons.collapsed(data-toggle="collapse" data-target="#p3")
+				a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+				a(href="#" data-toggle="modal" data-target="#modal__add_reports").icon-settings
+				a(href="#" data-toggle="modal" data-target="#modal__driver-place").icon-send
+				.panel-heading-name.panel-heading-name--normal Максимов Андрей
+
+			.panel-body.panel-body-pad.collapse#p3(style="height:0;")
+				.panel-body-title Оценка качества вождения
+
+				ul.left__content_tabs(role="tablist")
+					li.active
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Час
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") День
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Неделя
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Месяц
+				.form__row.date__range
+					.date__range_item
+						input.datetime(type="text" placeholder="12.07.2017 00:00")
+					.date__range_item
+						input.datetime(type="text" placeholder="13.07.2017 00:00")
+				.form__row.max__speed
+					.form-label Максимальная скорость, км/ч
+					.form__field
+						input(type="text" value="100")
+				.form__row
+					button.btn Очистить
+					button.btn.btn-primary(data-content-full-show="cont3") Построить
 
 block content
+	.content__box#cont1(style="display: none;")
+		.content__box_head Максимов Андрей
+			i.icon-close
+			i.icon-minus
+		.content__box_slide_wrap
+			.content__box_body
+				// begin grid__driver
+				.grid.grid__driver
+					.grid__wrapper
+						.grid__driver_head Диаграмма нарушений
+						.grid__driver_body
+							.grid__driver_chart
+								img(src="img/diagramm.png", alt="")
+							.grid__driver_chart_legend.column
+								.grid__driver_chart_legend-item
+									.grid__driver_chart_legend-color(style="background-color: #f24841;")
+									|Скорость более 100 км/ч
+								.grid__driver_chart_legend-item
+									.grid__driver_chart_legend-color(style="background-color: #f2b641;")
+									|Опасное маневрирование
+								.grid__driver_chart_legend-item
+									.grid__driver_chart_legend-color(style="background-color: #be0082;")
+									|Резкое торможение/ускорение
+								.grid__driver_chart_legend-item
+									.grid__driver_chart_legend-color(style="background-color: #7900be;")
+									|Процентное соотношение ночной езды
+								.grid__driver_chart_legend-item
+									.grid__driver_chart_legend-color(style="background-color: #88d962;")
+									|Процентное соотношение езды в городе
+					.grid__wrapper
+						.grid__driver_head Статистика нарушений
+						.grid__driver_body
+							// begin grid__driver_stat
+							.grid.grid__2.grid__driver_stat
+								.grid__wrapper
+									.grid__count 18
+									.grid__text Среднее количество нарушений в час
+								.grid__wrapper
+									.grid__count 3
+									.grid__text Среднее количество нарушений на 10 км пути
+								.grid__wrapper
+									.grid__count 5
+									.grid__text Общее количество нарушений
+							// end grid__driver_stat
+						.grid__driver_foot
+							|Качество вождения:
+							.grid__driver_foot_result нормально
+
+				// end grid__driver
+					
+
+		.content__box_head Отчёт — Исходные данные
+			i.icon-close
+			i.icon-minus
+		.content__box_slide_wrap
+			.content__box_body
+				.content__box_body_top
+					.form__row
+						.form-label Нарушения
+						.form__field
+							select()
+								option(value="") Все
+								option(value="") Не все
+								option(value="") Ещё
+				.content__box_wrap.js-scrollbar
+					table.content__box_table
+						thead
+							tr
+								th Нарушение
+								th Скорость, км/ч
+								th Время начала манёвра
+						tbody
+							tr
+								td Опасное&nbsp;маневрирование
+								td 110
+								td 16/07/2017&nbsp;00:00:00
+							tr
+								td Опасное маневрирование
+								td 110
+								td 16/07/2017&nbsp;00:00:00
+							tr
+								td Опасное маневрирование
+								td 110
+								td 16/07/2017&nbsp;00:00:00
+							tr
+								td Опасное маневрирование
+								td 110
+								td 16/07/2017&nbsp;00:00:00
+							tr
+								td Превышение скорости
+								td 110
+								td 16/07/2017&nbsp;00:00:00
+							tr
+								td Превышение скорости
+								td 110
+								td 16/07/2017&nbsp;00:00:00
+
+				.content__box_footer
+					.content__box_footer-name Показаны записи 1-11 из 1,197
+
+					// begin pagination 
+					ul.paginations
+						li.prev-more
+							a(href="#")
+						li.prev
+							a(href="#")
+						li.active
+							a(href="#") 125
+						li /
+						li
+							a(href="#") 197
+						li.next
+							a(href="#")
+						li.next-more
+							a(href="#")
+					// end pagination 
+
 
 block other

@@ -199,3 +199,116 @@
 					div
 						button.btn.btn-primary Сохранить
 // end modal modal__add_reports 
+
+// Button trigger modal modal__create-driver 
+//- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-driver") Click to open modal
+// begin Modal modal__create-driver 
+.modal.modal-large.fade.modal__create-driver#modal__create-driver
+	.modal-dialog
+		.modal-content
+			a(href="#" class="modal-close" data-dismiss="modal")
+			.modal-header
+				.modal-title#myModalLabel Водитель
+			.modal-body
+				.grid.grid__2
+					.grid__wrapper
+						.form__row
+							.form-label Имя
+							.form-field
+								input(type="text" value="Сергей")
+					.grid__wrapper
+						.form__row
+							.form-label Телефон
+							.form-field
+								input(type="tel" value="+7 900 910 06 40")
+					.grid__wrapper
+						.form__row
+							.form-label Табельный номер
+							.form-field
+								input(type="text" value="23")
+					.grid__wrapper
+						.grid.grid__2
+							.grid__wrapper
+								.form__row
+									.form-label Ключ 1
+									.form-field
+										input(type="text" value="23")
+							.grid__wrapper
+								.form__row
+									.form-label Ключ 2
+									.form-field
+										input(type="text" value="23")
+				.form__row
+					.form-label Описание
+					.form-field
+						textarea
+
+				.form__row
+					.form-label Фото
+					.form-field
+						.file_upload
+							button.btn Прикрепить
+							div Файл не выбран
+							input(type="file")
+				
+			.modal-footer
+				.btn-confirm.float-right
+					div
+						button.btn(data-dismiss="modal") Отменить
+					div
+						button.btn.btn-primary Сохранить
+// end modal modal__create-driver 
+
+// Button trigger modal modal__driver-place 
+//- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__driver-place") Click to open modal
+// begin Modal modal__driver-place 
+.modal.modal-xlarge.fade.modal__driver-place#modal__driver-place
+	.modal-dialog
+		.modal-content
+			a(href="#" class="modal-close" data-dismiss="modal")
+			.modal-header
+				.modal-title#myModalLabel Название модали
+			.modal-body
+				table.content__box_table.form__row
+					thead
+						tr
+							th Объект
+							th Время назначения на объект
+							th Время снятия с объекта
+							th
+					tbody
+						tr
+							td Jeep Широкий
+							td 01.01.2017 00:00
+							td 31.12.2017 00:00
+							td
+								.delete__link
+									i.icon-close 
+									|Удалить
+						tr
+							td Jeep Широкий
+							td 01.01.2017 00:00
+							td 31.12.2017 00:00
+							td
+								.delete__link
+									i.icon-close 
+									|Удалить
+						tr
+							td Jeep Широкий
+							td 01.01.2017 00:00
+							td 31.12.2017 00:00
+							td
+								.delete__link
+									i.icon-close 
+									|Удалить
+
+				.form__row
+					button.btn.btn-primary Добавить
+					
+			.modal-footer
+				.btn-confirm.float-right
+					div
+						button.btn(data-dismiss="modal") Отменить
+					div
+						button.btn.btn-primary Сохранить
+// end modal modal__driver-place 

@@ -10,6 +10,16 @@
         width: 0;
         letter-spacing: -1px;
     }
+    &-large {
+        .modal-dialog {
+            max-width: 600px;
+        }
+    }
+    &-xlarge {
+        .modal-dialog {
+            max-width: 850px;
+        }
+    }
     &-middle {
         .modal-dialog {
             max-width: 400px;
@@ -225,5 +235,9 @@
     }
 }
 
-
+.modal__driver-place {
+    .btn {
+        padding: 6px 20px 5px;
+    }
+}
 

@@ -219,6 +219,9 @@ $(document).ready(function() {
     });
 	$('.ui-slider-handle').append('<span class="ui-slider-bage" />')
     $('.ui-slider-bage').html($('.track__slide').slider('value'));
+
+    filleUpload();
+
 });
 
 function heightResize() {
@@ -280,4 +283,48 @@ function setContentBoxPosition(el) {
 	    return newCoord;
 	    newCoord = null;
 	});
+}
+
+function filleUpload() {
+    var wrapper = $( ".file_upload" ),
+        inp = wrapper.find( "input" ),
+        btn = wrapper.find( "button" ),
+        lbl = wrapper.find( "div" );
+    btn.focus(function(){
+        inp.focus()
+    });
+    // Crutches for the :focus style:
+    inp.focus(function(){
+        wrapper.addClass( "focus" );
+    }).blur(function(){
+        wrapper.removeClass( "focus" );
+    });
+    // Yep, it works!
+    btn.add( lbl ).click(function(){
+        inp.click();
+    });   
+    // Crutches for the :focus style:
+    btn.focus(function(){
+        wrapper.addClass( "focus" );
+    }).blur(function(){
+        wrapper.removeClass( "focus" );
+    });
+    var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+
+    inp.change(function(){
+        var file_name;
+        if( file_api && inp[ 0 ].files[ 0 ] )
+            file_name = inp[ 0 ].files[ 0 ].name;
+        else
+            file_name = inp.val().replace( "C:\\fakepath\\", '' );
+
+        if( ! file_name.length )
+            return;
+
+        if( lbl.is( ":visible" ) ){
+            lbl.text( file_name );
+            btn.text( "Выбрать" );
+        }else
+            btn.text( file_name );
+    }).change();
 }
