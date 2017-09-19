@@ -57,9 +57,9 @@
     &-content {
         border: none;
         background-color: transparent;
-        overflow: hidden;
+        // overflow: hidden;
         @extend %clear_a;
-        @include border-radius(6px);
+        // @include border-radius(6px);
     }
 
     &-backdrop {
@@ -99,6 +99,7 @@
         text-align: center;
         border-top: 0;
         padding: 0 34px 27px;
+        @include border-radius(0 0 6px 6px);
         .btn-confirm {
             @extend %clear_a;
             margin-left: -16px;
@@ -185,6 +186,24 @@
                 padding-left: 63px;
             }
         }
+    }
+    .form__row {
+        &-inline {
+            .form {
+                &-label {
+                    float: left;
+                    width: 70px;
+                    padding: 9px 15px 5px 0;
+                }
+                &-field {
+                    display: block;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .content__box-tabs {
+        margin-bottom: 25px;
     }
     @media (max-width: 425px) {
         &__create {

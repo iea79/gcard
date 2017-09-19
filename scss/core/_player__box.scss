@@ -1,0 +1,31 @@
+.player__box {
+	@extend %clear_a;
+	&_column {
+		float: left;
+		padding-right: 40px;
+	}
+	&_title {
+		font-family: "Muller Bold";
+		margin-bottom: 10px;
+	}
+	&_item {
+		margin-bottom: 7px;
+		&_name {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	&_color {
+		display: inline-block;
+		vertical-align: middle;
+		width: 26px;
+		height: 16px;
+		@include border-radius(2px);
+		margin-right: 10px;
+		&-dot {
+			width: 8px;
+			height: 8px;
+			@include border-radius(50%);
+		}
+	}
+}

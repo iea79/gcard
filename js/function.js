@@ -155,6 +155,12 @@ $(document).ready(function() {
     	$(this).closest('.content__box').hide();
     });
 
+    $('body').on('click touchend', '.content__box .icon-minus', function(event) {
+    	event.preventDefault();
+    	$(this).closest('.content__box_head').toggleClass('collapsed');
+    	$(this).closest('.content__box_head').next('.content__box_slide_wrap').slideToggle();
+    });
+
     $('body').on('click', '[data-content-show]', function(event) {
     	event.preventDefault();
     	var id = $(this).data('contentShow');
@@ -181,7 +187,18 @@ $(document).ready(function() {
 
     $('.datetime').datetimepicker({
         // locale: 'ru',
-        format: 'DD.MM.YYYY hh:mm',
+        format: 'DD.MM.YYYY HH:mm',
+        useCurrent: false,
+        focusOnShow: false,
+        ignoreReadonly: true,
+        allowInputToggle: true,
+        useCurrent: false,
+        // debug: true
+    });
+
+    $('.timepicker').datetimepicker({
+        // locale: 'ru',
+        format: 'HH:mm',
         useCurrent: false,
         focusOnShow: false,
         ignoreReadonly: true,

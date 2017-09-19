@@ -247,3 +247,16 @@ Buttons
         }
     }   
 }
+
+.btn-group {
+    .btn {
+        &-select {
+            padding: 0;
+            .select2 {
+                &-container {
+                    border: none;
+                }
+            }
+        }
+    }
+}

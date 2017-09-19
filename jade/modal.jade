@@ -136,3 +136,66 @@
 					div
 						button.btn.btn-primary Сохранить
 // end modal modal__create-route 
+
+// Button trigger modal modal__add_reports 
+//- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__add_reports") Click to open modal
+// begin Modal modal__add_reports 
+.modal.fade.modal__add_reports#modal__add_reports
+	.modal-dialog
+		.modal-content
+			a(href="#" class="modal-close" data-dismiss="modal")
+			.modal-header
+				.modal-title#myModalLabel E-mail отчёт
+			.modal-body 
+				ul.content__box-tabs(role="tablist")
+					li.active
+						a(href="#m1" aria-controls="" role="tab" data-toggle="tab")
+							|Объект
+					li
+						a(href="#m2" aria-controls="" role="tab" data-toggle="tab")
+							|Группа
+
+				.content__box-tabs-pane.active#m1(role="tabpanel")
+					.form__row
+						.form-label Объект
+						.form-field
+							input(type="text" value="Ford")
+					.form__row
+						.form-label E-mail
+						.form-field
+							input(type="text" value="sdfds@fdsf.ru")
+					.form__row
+						.form-label Периодичность
+						.form-field
+							select(data-placeholder="Каждый день")
+								option(value="")
+								option(value="1") Item
+								option(value="2") Item
+					.form__row
+						.form-label Тип отчёта
+						.form-field
+							select(data-placeholder="Поездки")
+								option(value="")
+								option(value="1") Item
+								option(value="2") Item
+					.form__row.form__row-inline
+						.form-label Время
+						.form-field
+							input.timepicker(type="text" value="23:00")
+					.form__row.form__row-inline
+						.form-label Формат
+						.form-field
+							select(data-placeholder="Поездки")
+								option(value="")
+								option(value="1" selected) PDF
+								option(value="2") HTML
+
+				.content__box-tabs-pane#m2(role="tabpanel")
+
+			.modal-footer
+				.btn-confirm
+					div
+						button.btn(data-dismiss="modal") Отменить
+					div
+						button.btn.btn-primary Сохранить
+// end modal modal__add_reports 

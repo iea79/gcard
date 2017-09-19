@@ -24,7 +24,7 @@
 		font-family: "Muller Bold";
 		font-size: 13px;
 		text-transform: uppercase;
-		padding: 14px 45px 14px 30px;
+		padding: 14px 60px 14px 30px;
 		position: relative;
 		@include border-radius(6px 6px 0 0);
 		.icon-close {
@@ -34,6 +34,17 @@
 			right: 15px;
 			font-style: normal;
 			font-size: 13px;
+		}
+		.icon-minus {
+			position: absolute;
+			cursor: pointer;
+			top: 9px;
+			right: 44px;
+			display: block;
+			font-size: 20px;
+		}
+		&.collapsed {
+			@include border-radius(6px);
 		}
 	}
 	&_body {
@@ -97,6 +108,7 @@
 		margin: -22px -23px 0 -22px;
 		// max-width: 100%;
 		overflow-y: auto;
+		min-height: 350px;
 		&.scroll-scrollx_visible {
 			padding-bottom: 13px;
 		}
@@ -185,6 +197,22 @@
         &_filter {
         	background-color: #fff;
         	white-space: nowrap;
+        	.icon-filter {
+        		margin-left: 10px !important;
+        	}
+        	input[type=text] {
+        		vertical-align: top;
+        	}
+        	&-group {
+        		color: #7794b4;
+        		input {
+        			width: 27px;
+        			margin: 0 4px;
+        		}
+        		.icon-filter {
+        			margin-left: 5px !important;
+        		}
+        	}
         }
         tbody {
         	tr {
@@ -193,6 +221,11 @@
         		}
         	}
         }
+	}
+	&_slide_wrap {
+		&+.content__box_head {
+			margin-top: 8px;
+		}
 	}
 	@media (max-width: 767px) {
 		max-width: none;

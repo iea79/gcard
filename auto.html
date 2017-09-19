@@ -46,7 +46,7 @@
             <ul class="navbar">
               <li class="navbar__item"><a href="/auto.html" class="navbar__link"><i class="gk-icon-car-facing-right"></i><span class="navbar__link_name">Автомобили</span></a></li>
               <li class="navbar__item"><a href="/tracks.html" class="navbar__link"><i class="gk-icon-highway"></i><span class="navbar__link_name">Треки</span></a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link"><i class="gk-icon-car-statistics"></i><span class="navbar__link_name">Отчёты и графики</span></a></li>
+              <li class="navbar__item"><a href="/reports.html" class="navbar__link"><i class="gk-icon-car-statistics"></i><span class="navbar__link_name">Отчёты и графики</span></a></li>
               <li class="navbar__item"><a href="/geoobject.html" class="navbar__link"><i class="gk-icon-car-navigation"></i><span class="navbar__link_name">Геообъекты</span></a></li>
               <li class="navbar__item"><a href="/notification.html" class="navbar__link"><i class="gk-icon-auto-sound"><span class="bage bage-info">5</span></i><span class="navbar__link_name">Уведомления</span></a></li>
               <li class="navbar__item"><a href="/route.html" class="navbar__link"><i class="gk-icon-signs"></i><span class="navbar__link_name">Маршруты</span></a></li>
@@ -839,5 +839,84 @@
       </div>
     </div>
     <!-- end modal modal__create-route -->
+    <!-- Button trigger modal modal__add_reports -->
+    <!-- begin Modal modal__add_reports -->
+    <div id="modal__add_reports" class="modal fade modal__add_reports">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">E-mail отчёт</div>
+          </div>
+          <div class="modal-body"> 
+            <ul role="tablist" class="content__box-tabs">
+              <li class="active"><a href="#m1" aria-controls="" role="tab" data-toggle="tab">Объект</a></li>
+              <li><a href="#m2" aria-controls="" role="tab" data-toggle="tab">Группа</a></li>
+            </ul>
+            <div id="m1" role="tabpanel" class="content__box-tabs-pane active">
+              <div class="form__row">
+                <div class="form-label">Объект</div>
+                <div class="form-field">
+                  <input type="text" value="Ford"/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">E-mail</div>
+                <div class="form-field">
+                  <input type="text" value="sdfds@fdsf.ru"/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">Периодичность</div>
+                <div class="form-field">
+                  <select data-placeholder="Каждый день">
+                    <option value=""></option>
+                    <option value="1">Item</option>
+                    <option value="2">Item</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">Тип отчёта</div>
+                <div class="form-field">
+                  <select data-placeholder="Поездки">
+                    <option value=""></option>
+                    <option value="1">Item</option>
+                    <option value="2">Item</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row form__row-inline">
+                <div class="form-label">Время</div>
+                <div class="form-field">
+                  <input type="text" value="23:00" class="timepicker"/>
+                </div>
+              </div>
+              <div class="form__row form__row-inline">
+                <div class="form-label">Формат</div>
+                <div class="form-field">
+                  <select data-placeholder="Поездки">
+                    <option value=""></option>
+                    <option value="1" selected="selected">PDF</option>
+                    <option value="2">HTML</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div id="m2" role="tabpanel" class="content__box-tabs-pane"></div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__add_reports -->
   </body>
 </html>

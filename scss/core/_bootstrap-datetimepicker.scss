@@ -458,3 +458,135 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
         }
     }
 }
+.modal,.content__box {
+    .bootstrap-datetimepicker-widget {
+        &.dropdown-menu {
+            // width: 100px;
+            width: auto;
+            &.bottom {
+                margin-top: 7px;
+                &:before {
+                }
+
+                &:after {
+                }
+            }
+
+            &.top {
+                margin-bottom: 7px;
+                &:before {
+                }
+
+                &:after {
+                }
+            }
+        }
+        table {
+            & td,
+            & th {
+            }
+            & th {
+                background-color: #fff;
+                color: #333;
+                &:first-of-type {
+                    width: 33px;
+                }
+                &.picker-switch {
+                }
+                &.disabled,
+                &.disabled:hover {
+                }
+                &.prev::after {
+                }
+                &.next::after {
+                }
+            }
+
+            & thead tr:first-child th {
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+
+            tr {
+                &:nth-child(even) {
+                    background-color: #fff;
+                }
+            }
+
+            & td {
+                width: 33px;
+                height: 33px;
+                line-height: 33px;
+                padding-top: 0;
+                padding-bottom: 0;
+                &.cw {
+                }
+
+                &.day {
+                }
+                &.day:hover,
+                &.hour:hover,
+                &.minute:hover,
+                &.second:hover {
+                    background-color: #eee;
+                }
+                &.old,
+                &.new {
+                    &:hover {
+                        color: #333;
+                    }
+                }
+                &.today {
+                    &:before {
+                    }
+                }
+                &.active,
+                &.active:hover {
+                    background-color: #006baf;
+                }
+
+                &.active.today:before {
+                }
+                &.disabled,
+                &.disabled:hover {
+                }
+                span {
+                    width: 33px;
+                    height: 33px;
+                    line-height: 33px;
+                    background-color: #fff;
+                    &:hover {
+                        background-color: #eee;
+                    }
+                    &.active {
+                    }
+                    &.old {
+                    }
+                    &.disabled,
+                    &.disabled:hover {
+                    }
+                }
+            }
+        }
+        .timepicker {
+            &-hour,&-minute {
+                background-color: #fff;
+            }
+            table {
+                td {
+                    color: #333;
+                    span.glyphicon {
+                        color: #333;
+                    }
+                    &:nth-of-type(2) {
+                        width: 10px;
+                    }
+                }
+            }
+            .separator {
+                width: 10px !important;
+            }
+        }
+    }
+}

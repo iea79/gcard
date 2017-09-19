@@ -1,0 +1,315 @@
+extends template.jade
+
+block title
+	title Отчёты и графики
+
+block aside
+	ul.nav.nav-tabs.nav-tabs-login(role="tablist")
+		li.active
+			a(href="#1" aria-controls="" role="tab" data-toggle="tab") Объект
+		li
+			a(href="#2" aria-controls="" role="tab" data-toggle="tab") Группа
+
+	.tab-content
+		// Tab 1
+		.tab-pane.active#1(role="tabpanel")
+
+			.panel-body.panel-body-pad
+				.form__row.form__row_inline
+					.form-label Объект
+					.form__field
+						select(data-placeholder="Все")
+							option(value="")
+							option(value="1") Item 1
+							option(value="2") Item 2
+
+			.panel-body.panel-body-pad
+				.form__row.form__row_inline
+					.form-label Отчёт
+					.form__field
+						select(data-placeholder="Исходные данные")
+							option(value="")
+							option(value="1") Item 1
+							option(value="2") Item 2
+
+			.panel-body.panel-body-pad.left__content_checkbox
+				.grid
+					.grid__wrapper
+						input(type="checkbox")
+						.form-label Показывать трек на карте
+
+			.panel-body.panel-body-pad
+				ul.left__content_tabs(role="tablist")
+					li.active
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Час
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") День
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Неделя
+					li
+						a(href="" aria-controls="" role="tab" data-toggle="tab") Месяц
+				.date__range
+					.date__range_item
+						input.datetime(type="text" placeholder="12.07.2017 00:00")
+					.date__range_item
+						input.datetime(type="text" placeholder="13.07.2017 00:00")
+
+			.form__row
+				button.btn Очистить
+				button.btn.btn-primary(data-content-full-show="cont1") Построить
+			.form__row
+				.btn-group
+					button.btn Экспорт
+					.btn.btn-select
+						select
+							option(value="0") HTML
+							option(value="1") PDF
+							option(value="2") XML
+
+			.form__row
+				.panel-heading.collapsed(data-toggle="collapse" data-target="#p1")
+					a(href="#" data-toggle="modal" data-target="#modal__add_reports").gk-icon-plus 
+					| E-mail отчёт
+				.panel-body.collapse#p1(style="height:0;")
+					ul.list__icons
+						li.list__icons_item
+							.list__icons_left
+								a(href="#").icon-list-truck
+							.list__icons_center Поездки
+							.list__icons_right
+								a(href="#").icon-settings
+								a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+						li.list__icons_item
+							.list__icons_left
+								a(href="#").icon-list-truck
+							.list__icons_center Отчёт по объекту
+							.list__icons_right
+								a(href="#").icon-settings
+								a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+						li.list__icons_item
+							.list__icons_left
+								a(href="#").icon-list-truck
+							.list__icons_center Тест
+							.list__icons_right
+								a(href="#").icon-settings
+								a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+				.panel-heading.collapsed(data-toggle="collapse" data-target="#p2")
+					a(href="#" data-toggle="modal" data-target="#modal__add_reports").gk-icon-plus 
+					| FTP отчёт
+				.panel-body.collapse#p2(style="height:0;")
+					ul.list__icons
+						li.list__icons_item
+							.list__icons_left
+								a(href="#").icon-list-truck
+							.list__icons_center Поездки
+							.list__icons_right
+								a(href="#").icon-settings
+								a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+						li.list__icons_item
+							.list__icons_left
+								a(href="#").icon-list-truck
+							.list__icons_center Отчёт по объекту
+							.list__icons_right
+								a(href="#").icon-settings
+								a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+						li.list__icons_item
+							.list__icons_left
+								a(href="#").icon-list-truck
+							.list__icons_center Тест
+							.list__icons_right
+								a(href="#").icon-settings
+								a(href="#" data-toggle="modal" data-target="#modal__delete").icon-close
+
+		// Tab 2
+		.tab-pane.active#2(role="tabpanel")
+
+block content
+	.content__box#cont1(style="display: none;")
+		.content__box_head Отчёт — Исходные данные
+			i.icon-close
+			i.icon-minus
+		.content__box_slide_wrap
+			.content__box_body
+				.content__box_wrap.js-scrollbar
+					table.content__box_table
+						thead
+							tr
+								th Время
+								th Широта
+								th Долгота
+								th Скорость
+								th Высота
+								th Курс
+								th Спутники
+								th Параметры
+						tbody
+							tr.content__box_table_filter
+								td 
+									input.timepicker(type="text")
+									i.icon-filter
+								td
+									.content__box_table_filter-group
+										|C
+										input(type="text")
+										|до
+										input(type="text")
+										i.icon-filter
+								td
+									.content__box_table_filter-group
+										|C
+										input(type="text")
+										|до
+										input(type="text")
+										i.icon-filter
+								td
+									.content__box_table_filter-group
+										|C
+										input(type="text")
+										|до
+										input(type="text")
+										i.icon-filter
+								td
+									.content__box_table_filter-group
+										|C
+										input(type="text")
+										|до
+										input(type="text")
+										i.icon-filter
+								td
+									.content__box_table_filter-group
+										|C
+										input(type="text")
+										|до
+										input(type="text")
+										i.icon-filter
+								td
+									.content__box_table_filter-group
+										|C
+										input(type="text")
+										|до
+										input(type="text")
+										i.icon-filter
+								td 
+									input(type="text")
+									i.icon-filter
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+							tr
+								td 16/07/2017&nbsp;00:00:00
+								td 55.810955
+								td 37.344032
+								td 0
+								td 140
+								td 0
+								td 23
+								td virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0
+
+				.content__box_footer
+					.content__box_footer-name Показаны записи 1-11 из 1,197
+
+					// begin pagination 
+					ul.paginations
+						li.prev-more
+							a(href="#")
+						li.prev
+							a(href="#")
+						li.active
+							a(href="#") 125
+						li /
+						li
+							a(href="#") 197
+						li.next
+							a(href="#")
+						li.next-more
+							a(href="#")
+					// end pagination 
+
+		.content__box_head Отчёт — Исходные данные
+			i.icon-close
+			i.icon-minus
+		.content__box_slide_wrap
+			.content__box_body
+				.content__box_chart
+					img(src="img/chart-big.jpg", alt="")
+
+block other

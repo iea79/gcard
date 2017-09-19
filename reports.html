@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>Геообъекты</title>
+    <title>Отчёты и графики</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -111,223 +111,121 @@
       <div class="left__content js_full_height">			
         <div class="left__content_wrap">
           <ul role="tablist" class="nav nav-tabs nav-tabs-login">
-            <li class="active"><a href="#1" aria-controls="" role="tab" data-toggle="tab"><i data-toggle="modal" data-target="#modal__create-geozone" class="gk-icon-plus"></i>Геозоны</a></li>
-            <li><a href="#2" aria-controls="" role="tab" data-toggle="tab"><i data-toggle="modal" data-target="#modal__create-geopoint" class="gk-icon-plus"> </i>Геоточки</a></li>
+            <li class="active"><a href="#1" aria-controls="" role="tab" data-toggle="tab">Объект</a></li>
+            <li><a href="#2" aria-controls="" role="tab" data-toggle="tab">Группа</a></li>
           </ul>
           <div class="tab-content">
             <!-- Tab 1-->
             <div id="1" role="tabpanel" class="tab-pane active">
-              <!--item 1-->
-              <div data-toggle="collapse" data-target="#p1" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
-                <div class="panel-heading-name">Популярные зоны<span class="count">(2)</span></div>
+              <div class="panel-body panel-body-pad">
+                <div class="form__row form__row_inline">
+                  <div class="form-label">Объект</div>
+                  <div class="form__field">
+                    <select data-placeholder="Все">
+                      <option value=""></option>
+                      <option value="1">Item 1</option>
+                      <option value="2">Item 2</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-              <div id="p1" style="height:0;" class="panel-body collapse">
-                <ul class="list__icons">
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Стоянка возле магазина</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Москва</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Тест</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
+              <div class="panel-body panel-body-pad">
+                <div class="form__row form__row_inline">
+                  <div class="form-label">Отчёт</div>
+                  <div class="form__field">
+                    <select data-placeholder="Исходные данные">
+                      <option value=""></option>
+                      <option value="1">Item 1</option>
+                      <option value="2">Item 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body panel-body-pad left__content_checkbox">
+                <div class="grid">
+                  <div class="grid__wrapper">
+                    <input type="checkbox"/>
+                    <div class="form-label">Показывать трек на карте</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body panel-body-pad">
+                <ul role="tablist" class="left__content_tabs">
+                  <li class="active"><a href="" aria-controls="" role="tab" data-toggle="tab">Час</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">День</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Неделя</a></li>
+                  <li><a href="" aria-controls="" role="tab" data-toggle="tab">Месяц</a></li>
                 </ul>
+                <div class="date__range">
+                  <div class="date__range_item">
+                    <input type="text" placeholder="12.07.2017 00:00" class="datetime"/>
+                  </div>
+                  <div class="date__range_item">
+                    <input type="text" placeholder="13.07.2017 00:00" class="datetime"/>
+                  </div>
+                </div>
               </div>
-              <!--item 2-->
-              <div data-toggle="collapse" data-target="#p2" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
-                <div class="panel-heading-name">Тест<span class="count">(2)</span></div>
+              <div class="form__row">
+                <button class="btn">Очистить</button>
+                <button data-content-full-show="cont1" class="btn btn-primary">Построить</button>
               </div>
-              <div id="p2" style="height:0;" class="panel-body collapse">
-                <ul class="list__icons">
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Стоянка возле магазина</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Москва</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Тест</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                </ul>
+              <div class="form__row">
+                <div class="btn-group">
+                  <button class="btn">Экспорт</button>
+                  <div class="btn btn-select">
+                    <select>
+                      <option value="0">HTML</option>
+                      <option value="1">PDF</option>
+                      <option value="2">XML</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-              <!--item 3-->
-              <div data-toggle="collapse" data-target="#p3" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
-                <div class="panel-heading-name">Автостоянка Магазин<span class="count">(12)</span></div>
+              <div class="form__row">
+                <div data-toggle="collapse" data-target="#p1" class="panel-heading collapsed"><a href="#" data-toggle="modal" data-target="#modal__add_reports" class="gk-icon-plus"> </a>E-mail отчёт</div>
+                <div id="p1" style="height:0;" class="panel-body collapse">
+                  <ul class="list__icons">
+                    <li class="list__icons_item">
+                      <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                      <div class="list__icons_center">Поездки</div>
+                      <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                    </li>
+                    <li class="list__icons_item">
+                      <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                      <div class="list__icons_center">Отчёт по объекту</div>
+                      <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                    </li>
+                    <li class="list__icons_item">
+                      <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                      <div class="list__icons_center">Тест</div>
+                      <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                    </li>
+                  </ul>
+                </div>
+                <div data-toggle="collapse" data-target="#p2" class="panel-heading collapsed"><a href="#" data-toggle="modal" data-target="#modal__add_reports" class="gk-icon-plus"> </a>FTP отчёт</div>
+                <div id="p2" style="height:0;" class="panel-body collapse">
+                  <ul class="list__icons">
+                    <li class="list__icons_item">
+                      <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                      <div class="list__icons_center">Поездки</div>
+                      <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                    </li>
+                    <li class="list__icons_item">
+                      <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                      <div class="list__icons_center">Отчёт по объекту</div>
+                      <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                    </li>
+                    <li class="list__icons_item">
+                      <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                      <div class="list__icons_center">Тест</div>
+                      <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div id="p3" style="height:0;" class="panel-body collapse">
-                <ul class="list__icons">
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Стоянка возле магазина</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Москва</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Тест</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                </ul>
-              </div>
-              <!--item 4-->
-              <div data-toggle="collapse" data-target="#p4" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
-                <div class="panel-heading-name">Jeep<span class="count">(12)</span></div>
-              </div>
-              <div id="p4" style="height:0;" class="panel-body collapse">
-                <ul class="list__icons">
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Стоянка возле магазина</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Москва</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Тест</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                </ul>
-              </div>
-              <!-- begin pagination -->
-              <ul class="paginations">
-                <li class="prev"><a href="#"></a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li class="next"><a href="#"></a></li>
-              </ul>
-              <!-- end pagination -->
             </div>
             <!-- Tab 2-->
-            <div id="2" role="tabpanel" class="tab-pane">
-              <!--item 1-->
-              <div data-toggle="collapse" data-target="#p11" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
-                <div class="panel-heading-name">Популярные зоны<span class="count">(2)</span></div>
-              </div>
-              <div id="p11" style="height:0;" class="panel-body collapse">
-                <ul class="list__icons">
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Стоянка возле магазина</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Москва</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Тест</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                </ul>
-              </div>
-              <!--item 2-->
-              <div data-toggle="collapse" data-target="#p12" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
-                <div class="panel-heading-name">Тест<span class="count">(2)</span></div>
-              </div>
-              <div id="p12" style="height:0;" class="panel-body collapse">
-                <ul class="list__icons">
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Стоянка возле магазина</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Москва</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Тест</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                </ul>
-              </div>
-              <!--item 3-->
-              <div data-toggle="collapse" data-target="#p13" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
-                <div class="panel-heading-name">Автостоянка Магазин<span class="count">(12)</span></div>
-              </div>
-              <div id="p13" style="height:0;" class="panel-body collapse">
-                <ul class="list__icons">
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Стоянка возле магазина</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Москва</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Тест</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                </ul>
-              </div>
-              <!--item 4-->
-              <div data-toggle="collapse" data-target="#p14" class="panel-heading panel-heading-icons collapsed"><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a><a href="#" class="icon-settings"></a>
-                <div class="panel-heading-name">Jeep<span class="count">(12)</span></div>
-              </div>
-              <div id="p14" style="height:0;" class="panel-body collapse">
-                <ul class="list__icons">
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Стоянка возле магазина</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Москва</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                  <li class="list__icons_item">
-                    <div class="list__icons_left"><a href="#" class="icon-list-cell"></a></div>
-                    <div class="list__icons_center">Тест</div>
-                    <div class="list__icons_right"><a href="#" class="icon-settings"></a><a href="#" data-toggle="modal" data-target="#modal__delete" class="icon-close"></a></div>
-                  </li>
-                </ul>
-              </div>
-              <!-- begin pagination -->
-              <ul class="paginations">
-                <li class="prev"><a href="#"></a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li class="next"><a href="#"></a></li>
-              </ul>
-              <!-- end pagination -->
-              
-            </div>
+            <div id="2" role="tabpanel" class="tab-pane active"></div>
           </div>
           <footer class="footer">2017 © Global Service</footer>
         </div>
@@ -337,6 +235,195 @@
       <!-- begin main__content-->
       <main class="main__content js_full_height">
         <div id="map" class="map_box"></div>
+        <div id="cont1" style="display: none;" class="content__box">
+          <div class="content__box_head">Отчёт — Исходные данные<i class="icon-close"></i><i class="icon-minus"></i></div>
+          <div class="content__box_slide_wrap">
+            <div class="content__box_body">
+              <div class="content__box_wrap js-scrollbar">
+                <table class="content__box_table">
+                  <thead>
+                    <tr>
+                      <th>Время</th>
+                      <th>Широта</th>
+                      <th>Долгота</th>
+                      <th>Скорость</th>
+                      <th>Высота</th>
+                      <th>Курс</th>
+                      <th>Спутники</th>
+                      <th>Параметры</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="content__box_table_filter">
+                      <td> 
+                        <input type="text" class="timepicker"/><i class="icon-filter"></i>
+                      </td>
+                      <td>
+                        <div class="content__box_table_filter-group">C
+                          <input type="text"/>до
+                          <input type="text"/><i class="icon-filter"></i>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="content__box_table_filter-group">C
+                          <input type="text"/>до
+                          <input type="text"/><i class="icon-filter"></i>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="content__box_table_filter-group">C
+                          <input type="text"/>до
+                          <input type="text"/><i class="icon-filter"></i>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="content__box_table_filter-group">C
+                          <input type="text"/>до
+                          <input type="text"/><i class="icon-filter"></i>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="content__box_table_filter-group">C
+                          <input type="text"/>до
+                          <input type="text"/><i class="icon-filter"></i>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="content__box_table_filter-group">C
+                          <input type="text"/>до
+                          <input type="text"/><i class="icon-filter"></i>
+                        </div>
+                      </td>
+                      <td> 
+                        <input type="text"/><i class="icon-filter"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                    <tr>
+                      <td>16/07/2017&nbsp;00:00:00</td>
+                      <td>55.810955</td>
+                      <td>37.344032</td>
+                      <td>0</td>
+                      <td>140</td>
+                      <td>0</td>
+                      <td>23</td>
+                      <td>virtual:1;IN0:0;IN1:0;IN2:0;IN3:0;IN4:0;IN5:0;IN6:0;IN7:0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="content__box_footer">
+                <div class="content__box_footer-name">Показаны записи 1-11 из 1,197</div>
+                <!-- begin pagination -->
+                <ul class="paginations">
+                  <li class="prev-more"><a href="#"></a></li>
+                  <li class="prev"><a href="#"></a></li>
+                  <li class="active"><a href="#">125</a></li>
+                  <li>/</li>
+                  <li><a href="#">197</a></li>
+                  <li class="next"><a href="#"></a></li>
+                  <li class="next-more"><a href="#"></a></li>
+                </ul>
+                <!-- end pagination -->
+              </div>
+            </div>
+          </div>
+          <div class="content__box_head">Отчёт — Исходные данные<i class="icon-close"></i><i class="icon-minus"></i></div>
+          <div class="content__box_slide_wrap">
+            <div class="content__box_body">
+              <div class="content__box_chart"><img src="img/chart-big.jpg" alt=""/></div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <!-- Modals-->

@@ -21,6 +21,12 @@
 	}
 }
 
+.icon-list-truck {
+	&:before {
+		content: image-url('icon-truck.png');
+	}
+}
+
 .icon-settings {
 	&:before {
 		content: image-url('settings.png');
@@ -40,6 +46,12 @@
 	&:before {
 		content: 'P';
 		font-weight: 600;
+	}
+}
+
+.icon-minus {
+	&:before {
+		content: '—';
 	}
 }
 

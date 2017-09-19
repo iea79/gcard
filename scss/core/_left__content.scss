@@ -77,6 +77,7 @@
 			position: relative;
 			cursor: pointer;
 			margin-bottom: 0;
+			width: 100%;
 			@include border-radius(6px 6px 0 0);
 			@include trs(.3);
 			&-name {
@@ -160,6 +161,12 @@
 					&:focus {
 						text-decoration: none;
 					}
+				}
+			}
+			&>.gk-icon-plus {
+				margin-right: 10px;
+				&:hover,&:active,&:focus {
+					text-decoration: none;
 				}
 			}
 			&-route {
@@ -284,6 +291,7 @@
 					padding: 6px 20px 4px;
 					z-index: 2;
 					font-size: 13px;
+					margin: 0;
 				}
 			}
 		}
@@ -312,6 +320,10 @@
 		float: left;
 		&+.form-label {
 			overflow: hidden;
+		}
+		&:checked:before,
+		&:indeterminate:before {
+			top: 1px;
 		}
 	}
 	&_tabs {
@@ -344,6 +356,31 @@
 		margin-right: 10px;
 		padding: 5px 20px;
 		font-size: 13px;
+		&-group {
+		    .btn {
+		    	margin: 0;
+		    	&:last-child {
+		    		margin-left: -2px;
+		    	}
+		        &-select {
+		            padding: 0;
+		            .select2 {
+		                &-container {
+		                    border: none;
+		                }
+		                &-selection {
+		                	&--single {
+		                		border: none;
+		                		font-size: 13px;
+		                		padding-right: 20px;
+		                		padding: 8px 30px 7px 20px;
+		                		font-family: "Muller Medium";
+		                	}
+		                }
+		            }
+		        }
+		    }
+		}
 	}
 	@media (max-width: 1199px) {
 		width: 380px;
