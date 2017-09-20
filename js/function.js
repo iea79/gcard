@@ -222,6 +222,13 @@ $(document).ready(function() {
 
     filleUpload();
 
+    $('[data-toggle="modal"]').on('click', function (e) {
+	    e.preventDefault();
+	    e.stopPropagation();
+	    var target = $(this).data('target');
+	    $(target).modal('show');
+   	})
+
 });
 
 function heightResize() {
