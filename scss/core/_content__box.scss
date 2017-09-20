@@ -286,6 +286,10 @@
 	        white-space: nowrap;    	
 	        .icon-edit,.icon-trash {
 	        	margin: 0 5px;
+	        	@include trs(.3);
+	        	&:hover {
+	        		opacity: .8;
+	        	}
 	        }
         }
 	}
