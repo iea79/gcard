@@ -1,0 +1,168 @@
+extends template.jade
+
+block title
+	title Техобслуживание
+
+block aside
+	ul.nav.nav-tabs.nav-tabs-login(role="tablist")
+		li.active
+			a(href="#1" aria-controls="" role="tab" data-toggle="tab") Техобслуживание
+
+	.tab-content
+		// Tab 1
+		.tab-pane.active#1(role="tabpanel")
+			//item 1
+			.panel-heading.collapsed(data-toggle="collapse" data-target="#p1")
+				.panel-heading-name.panel-heading-name--normal Просроченное ТО
+					span.count (2)
+			.panel-body.collapse#p1(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-truck
+						.list__icons_center ХИНО С841ВХ
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-truck
+						.list__icons_center Chevrolet Lanos
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-truck
+						.list__icons_center Ford
+
+			.panel-heading.collapsed(data-toggle="collapse" data-target="#p2")
+				.panel-heading-name.panel-heading-name--normal Планируемое ТО
+					span.count (10)
+			.panel-body.collapse#p2(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-truck
+						.list__icons_center ХИНО С841ВХ
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-truck
+						.list__icons_center Chevrolet Lanos
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-truck
+						.list__icons_center Ford
+
+			.panel-heading.collapsed(data-toggle="collapse" data-target="#p3")
+				.panel-heading-name.panel-heading-name--normal История ТО
+					span.count (52)
+			.panel-body.collapse#p3(style="height:0;")
+				ul.list__icons
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-truck
+						.list__icons_center ХИНО С841ВХ
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-truck
+						.list__icons_center Chevrolet Lanos
+					li.list__icons_item
+						.list__icons_left
+							a(href="#").icon-list-truck
+						.list__icons_center Ford
+
+		// Tab 2
+		.tab-pane.active#2(role="tabpanel")
+
+block content
+	.content__box.content__box--withe.content__box_full-screen
+		.content__box_title Просроченное ТО — ХИНО С841ВХ
+		// begin grid__service
+		.grid.grid__service
+			.grid__wrapper
+				.grid__service_row
+					dl
+						dt Объект: 
+						dd ХИНО С841ВХ
+				.grid__service_row
+					dl
+						dt Марка: 
+						dd Рено
+
+						dt Год: 
+						dd 2006
+
+						dt Гос. номер: 
+						dd В777ОР174
+			.grid__wrapper
+				.grid__service_row
+					dl
+						dt Следующее ТО: 
+						dd пробег превышен на 600 моточас.. 
+				.grid__service_row
+					dl
+						dt Пробег: 
+						dd 57023 км,
+
+						dt Моточасы: 
+						dd 800
+			.grid__wrapper
+				a(href="#").btn Характеристики
+		// end grid__service
+		
+		.content__box_wrap.js-scrollbar
+			table.content__box_table.content__box_table-services
+				thead
+					tr
+						th Тип работ
+						th Дата ТО
+						th Местоположение
+						th Стоимость
+						th Период ТО
+						th Пробег
+						th Запланированное ТО
+						th Моточасы
+						th Период моточасов
+						th Список работ
+						th
+				tbody
+					tr
+						td Масло
+						td 03.06.2017
+						td Какая разница
+						td 400
+						td 56000 км
+						td 50000 км
+						td 31.08.2017
+						td 600
+						td 800
+						td Но комментс
+						td.edit__group
+							a(href="#").icon-edit
+							a(href="#").icon-trash
+					tr
+						td Масло
+						td 03.06.2017
+						td Какая разница
+						td 400
+						td 56000 км
+						td 50000 км
+						td 31.08.2017
+						td 600
+						td 800
+						td Но комментс
+						td.edit__group
+							a(href="#").icon-edit
+							a(href="#").icon-trash
+					tr
+						td Масло
+						td 03.06.2017
+						td Какая разница
+						td 400
+						td 56000 км
+						td 50000 км
+						td 31.08.2017
+						td 600
+						td 800
+						td Но комментс
+						td.edit__group
+							a(href="#").icon-edit
+							a(href="#").icon-trash
+
+
+block other

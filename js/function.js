@@ -178,7 +178,7 @@ $(document).ready(function() {
 		heightResize();
     });
 
-    $('body').on('click', '.content__box', function() {
+    $('body').on('click', '.content__box_min', function() {
     	$('.content__box').not(this).removeClass('selected');
     	$(this).addClass('selected');
     });

@@ -39,6 +39,18 @@
 	}
 }
 
+.icon-trash {
+	&:before {
+		content: image-url('icon-trash.png');
+	}
+}
+
+.icon-edit {
+	&:before {
+		content: image-url('icon-edit.png');
+	}
+}
+
 .icon-list-round {
 	vertical-align: middle;
 	margin-right: 10px;

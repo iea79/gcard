@@ -232,6 +232,40 @@
     }
 }
 
+.grid__service {
+    .grid__wrapper {
+
+    }
+    &_row {
+
+    }
+    dl {
+        display: inline-block;
+        max-width: 338px;
+        white-space: nowrap;
+        margin-bottom: 6px;
+        dt, dd {
+            display: inline-block;
+        }
+        dt {
+            font-family: "Muller Light";
+            font-weight: normal;
+        }
+        dd {
+           font-family: "Muller Bold"; 
+            margin-right: 15px;
+        }
+    }
+    @media (max-width: 767px) {
+        dl {
+           white-space: normal; 
+            dt {
+                display: block;
+            }
+        }
+    }
+}
+
 .delete__link {
     font-size: 13px;
     color: #f24841;

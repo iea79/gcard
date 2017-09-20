@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Техобслуживание</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/jquery-ui.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApMGitD0JBNexZOL6VioySmY2NRy-HKLQ"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/function.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- begin header -->
+      <header class="header">
+        <div class="header__mobile">
+          <div class="header__mobile_toggle"></div><a href="" class="header__mobile_logo"><img src="img/logo.png"/></a>
+        </div>
+        <div class="header__mobile_menu"><a href="" class="logo"><img src="img/logo.png"/></a>
+          <!-- begin header__right -->
+          <div class="header__right">
+            <div class="header__right_item">
+              <div class="header__right_top">365 дней</div><a href="#" class="header__right_link">Баланс</a>
+            </div>
+            <div class="header__right_item">
+              <div class="header__right_top">Sergey</div><a href="#" class="header__right_link">Выйти<i class="icon-logout"></i></a>
+            </div>
+          </div>
+          <!-- end header__right -->
+          <!-- begin navbar-->
+          <div class="header__center">
+            <ul class="navbar">
+              <li class="navbar__item"><a href="/auto.html" class="navbar__link"><i class="gk-icon-car-facing-right"></i><span class="navbar__link_name">Автомобили</span></a></li>
+              <li class="navbar__item"><a href="/tracks.html" class="navbar__link"><i class="gk-icon-highway"></i><span class="navbar__link_name">Треки</span></a></li>
+              <li class="navbar__item"><a href="/reports.html" class="navbar__link"><i class="gk-icon-car-statistics"></i><span class="navbar__link_name">Отчёты и графики</span></a></li>
+              <li class="navbar__item"><a href="/geoobject.html" class="navbar__link"><i class="gk-icon-car-navigation"></i><span class="navbar__link_name">Геообъекты</span></a></li>
+              <li class="navbar__item"><a href="/notification.html" class="navbar__link"><i class="gk-icon-auto-sound"><span class="bage bage-info">5</span></i><span class="navbar__link_name">Уведомления</span></a></li>
+              <li class="navbar__item"><a href="/route.html" class="navbar__link"><i class="gk-icon-signs"></i><span class="navbar__link_name">Маршруты</span></a></li>
+              <li class="navbar__item"><a href="/drivers.html" class="navbar__link"><i class="gk-icon-car-driver"></i><span class="navbar__link_name">Водители</span></a></li>
+              <li class="navbar__item"><a href="/service.html" class="navbar__link"><i class="gk-icon-auto-repair-service"></i><span class="navbar__link_name">Техобслуживание</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- end navbar -->
+        <!-- begin mini__menu -->
+        <div class="mini__menu">
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-magnifying-glass"></div>
+            <div class="mini__menu_drop">
+              <input type="text" placeholder="Adress"/>
+            </div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle menu-close">
+              <div class="mini__menu_burger"></div>
+            </div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-export"></div>
+            <div class="mini__menu_drop">Импорт/Экспорт</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-gps-location"></div>
+            <div class="mini__menu_drop">Локатор</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-support"></div>
+            <div class="mini__menu_drop">Техническая поддержка</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-copy-document"></div>
+            <div class="mini__menu_drop">Документация</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-chat"></div>
+            <div class="mini__menu_drop">Чат</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-settings"></div>
+            <div class="mini__menu_drop">Настройки</div>
+          </div>
+          <div class="mini__menu_item">
+            <div class="mini__menu_toggle gk-icon-arrow-on-world-grid"></div>
+            <div class="mini__menu_drop">
+              <ul class="mini__menu_lang_list">
+                <li> <a href="#">En</a></li>
+                <li> <a href="#">Ru</a></li>
+                <li> <a href="#">Cn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end mini__menu -->
+      </header>
+      <!-- end header -->
+      <!-- begin left__content -->
+      <div class="left__content js_full_height">			
+        <div class="left__content_wrap">
+          <ul role="tablist" class="nav nav-tabs nav-tabs-login">
+            <li class="active"><a href="#1" aria-controls="" role="tab" data-toggle="tab">Техобслуживание</a></li>
+          </ul>
+          <div class="tab-content">
+            <!-- Tab 1-->
+            <div id="1" role="tabpanel" class="tab-pane active">
+              <!--item 1-->
+              <div data-toggle="collapse" data-target="#p1" class="panel-heading collapsed">
+                <div class="panel-heading-name panel-heading-name--normal">Просроченное ТО<span class="count">(2)</span></div>
+              </div>
+              <div id="p1" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                    <div class="list__icons_center">ХИНО С841ВХ</div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                    <div class="list__icons_center">Chevrolet Lanos</div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                    <div class="list__icons_center">Ford</div>
+                  </li>
+                </ul>
+              </div>
+              <div data-toggle="collapse" data-target="#p2" class="panel-heading collapsed">
+                <div class="panel-heading-name panel-heading-name--normal">Планируемое ТО<span class="count">(10)</span></div>
+              </div>
+              <div id="p2" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                    <div class="list__icons_center">ХИНО С841ВХ</div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                    <div class="list__icons_center">Chevrolet Lanos</div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                    <div class="list__icons_center">Ford</div>
+                  </li>
+                </ul>
+              </div>
+              <div data-toggle="collapse" data-target="#p3" class="panel-heading collapsed">
+                <div class="panel-heading-name panel-heading-name--normal">История ТО<span class="count">(52)</span></div>
+              </div>
+              <div id="p3" style="height:0;" class="panel-body collapse">
+                <ul class="list__icons">
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                    <div class="list__icons_center">ХИНО С841ВХ</div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                    <div class="list__icons_center">Chevrolet Lanos</div>
+                  </li>
+                  <li class="list__icons_item">
+                    <div class="list__icons_left"><a href="#" class="icon-list-truck"></a></div>
+                    <div class="list__icons_center">Ford</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Tab 2-->
+            <div id="2" role="tabpanel" class="tab-pane active"></div>
+          </div>
+          <footer class="footer">2017 © Global Service</footer>
+        </div>
+        <div class="left__content_toggle"></div>
+      </div>
+      <!-- end left__content -->
+      <!-- begin main__content-->
+      <main class="main__content js_full_height">
+        <div id="map" class="map_box"></div>
+        <div class="content__box content__box--withe content__box_full-screen">
+          <div class="content__box_title">Просроченное ТО — ХИНО С841ВХ</div>
+          <!-- begin grid__service-->
+          <div class="grid grid__service">
+            <div class="grid__wrapper">
+              <div class="grid__service_row">
+                <dl>
+                  <dt>Объект: </dt>
+                  <dd>ХИНО С841ВХ</dd>
+                </dl>
+              </div>
+              <div class="grid__service_row">
+                <dl>
+                  <dt>Марка: </dt>
+                  <dd>Рено</dd>
+                  <dt>Год: </dt>
+                  <dd>2006</dd>
+                  <dt>Гос. номер: </dt>
+                  <dd>В777ОР174</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="grid__wrapper">
+              <div class="grid__service_row">
+                <dl>
+                  <dt>Следующее ТО: </dt>
+                  <dd>пробег превышен на 600 моточас.. </dd>
+                </dl>
+              </div>
+              <div class="grid__service_row">
+                <dl>
+                  <dt>Пробег: </dt>
+                  <dd>57023 км,</dd>
+                  <dt>Моточасы: </dt>
+                  <dd>800</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="grid__wrapper"><a href="#" class="btn">Характеристики</a></div>
+          </div>
+          <!-- end grid__service-->
+          <div class="content__box_wrap js-scrollbar">
+            <table class="content__box_table content__box_table-services">
+              <thead>
+                <tr>
+                  <th>Тип работ</th>
+                  <th>Дата ТО</th>
+                  <th>Местоположение</th>
+                  <th>Стоимость</th>
+                  <th>Период ТО</th>
+                  <th>Пробег</th>
+                  <th>Запланированное ТО</th>
+                  <th>Моточасы</th>
+                  <th>Период моточасов</th>
+                  <th>Список работ</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Масло</td>
+                  <td>03.06.2017</td>
+                  <td>Какая разница</td>
+                  <td>400</td>
+                  <td>56000 км</td>
+                  <td>50000 км</td>
+                  <td>31.08.2017</td>
+                  <td>600</td>
+                  <td>800</td>
+                  <td>Но комментс</td>
+                  <td class="edit__group"><a href="#" class="icon-edit"></a><a href="#" class="icon-trash"></a></td>
+                </tr>
+                <tr>
+                  <td>Масло</td>
+                  <td>03.06.2017</td>
+                  <td>Какая разница</td>
+                  <td>400</td>
+                  <td>56000 км</td>
+                  <td>50000 км</td>
+                  <td>31.08.2017</td>
+                  <td>600</td>
+                  <td>800</td>
+                  <td>Но комментс</td>
+                  <td class="edit__group"><a href="#" class="icon-edit"></a><a href="#" class="icon-trash"></a></td>
+                </tr>
+                <tr>
+                  <td>Масло</td>
+                  <td>03.06.2017</td>
+                  <td>Какая разница</td>
+                  <td>400</td>
+                  <td>56000 км</td>
+                  <td>50000 км</td>
+                  <td>31.08.2017</td>
+                  <td>600</td>
+                  <td>800</td>
+                  <td>Но комментс</td>
+                  <td class="edit__group"><a href="#" class="icon-edit"></a><a href="#" class="icon-trash"></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- Modals-->
+    <!-- Button trigger modal modal__delete -->
+    <!-- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__delete") Click to open modal-->
+    <!-- begin Modal modal__delete -->
+    <div id="modal__delete" class="modal fade modal-notif">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-body">
+            <div class="modal-notif-title">Вы действительно хотите удалить геозону?</div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__delete -->
+    <!-- Button trigger modal modal__create-geopoint -->
+    <!-- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-geopoint") Click to open modal-->
+    <!-- begin Modal modal__create-geopoint -->
+    <div id="modal__create-geopoint" class="modal fade modal__create-geopoint">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Создание геоточек</div>
+          </div>
+          <div class="modal-body"> 
+            <div class="form__row">
+              <div class="form-label">Группа геоточек</div>
+              <div class="form-field-icon"><a href="#" class="gk-icon-plus"></a>
+                <div class="form-field">
+                  <select data-placeholder="">
+                    <option value=""></option>
+                    <option value="1">Item</option>
+                    <option value="2">Item</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Название геоточки</div>
+              <div class="form-field">
+                <input type="text" placeholder=""/>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Описание</div>
+              <div class="form-field">
+                <input type="text" placeholder=""/>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__create-geopoint -->
+    <!-- Button trigger modal modal__create-geozone -->
+    <!-- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-geozone") Click to open modal-->
+    <!-- begin Modal modal__create-geozone -->
+    <div id="modal__create-geozone" class="modal fade modal__create-geozone">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Создание геозоны</div>
+          </div>
+          <div class="modal-body"> 
+            <div class="form__row">
+              <div class="form-label">Группа геозон</div>
+              <div class="form-field-icon"><a href="#" class="gk-icon-plus"></a>
+                <div class="form-field">
+                  <select data-placeholder="">
+                    <option value=""></option>
+                    <option value="1">Item</option>
+                    <option value="2">Item</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Цвет на карте</div>
+              <div class="form-field">
+                <div style="background-color: #ff5656;" class="form-color-box"></div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Название геозоны</div>
+              <div class="form-field">
+                <input type="text" placeholder=""/>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Максимальная скорость</div>
+              <div class="form-field">
+                <input type="text" placeholder=""/>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-field">
+                <div class="form-checkbox">
+                  <input id="ch1" type="checkbox"/>
+                  <label for="ch1">Круглая</label>
+                </div>
+                <div class="form-checkbox">
+                  <input id="ch2" type="checkbox"/>
+                  <label for="ch2">Произвольная</label>
+                </div>
+                <div class="form-checkbox">
+                  <input id="ch3" type="checkbox"/>
+                  <label for="ch3">Линейная</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__create-geozone -->
+    <!-- Button trigger modal modal__create-route -->
+    <!-- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__create-route") Click to open modal-->
+    <!-- begin Modal modal__create-route -->
+    <div id="modal__create-route" class="modal modal-middle fade modal__create-route">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Доавление маршрута</div>
+          </div>
+          <div class="modal-body">
+            <div class="modal__create-route-point modal__create-route-point--a">
+              <div class="form__row">
+                <div class="form-label">Название</div>
+                <div class="form-field">
+                  <input type="text" placeholder=""/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">Адрес</div>
+                <div class="form-field">
+                  <input type="text" placeholder=""/>
+                </div>
+              </div>
+            </div>
+            <div class="modal__create-route-point modal__create-route-point--b">
+              <div class="form__row">
+                <div class="form-label">Название</div>
+                <div class="form-field">
+                  <input type="text" placeholder=""/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">Адрес</div>
+                <div class="form-field">
+                  <input type="text" placeholder=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__create-route -->
+    <!-- Button trigger modal modal__add_reports -->
+    <!-- begin Modal modal__add_reports -->
+    <div id="modal__add_reports" class="modal fade modal__add_reports">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">E-mail отчёт</div>
+          </div>
+          <div class="modal-body"> 
+            <ul role="tablist" class="content__box-tabs">
+              <li class="active"><a href="#m1" aria-controls="" role="tab" data-toggle="tab">Объект</a></li>
+              <li><a href="#m2" aria-controls="" role="tab" data-toggle="tab">Группа</a></li>
+            </ul>
+            <div id="m1" role="tabpanel" class="content__box-tabs-pane active">
+              <div class="form__row">
+                <div class="form-label">Объект</div>
+                <div class="form-field">
+                  <input type="text" value="Ford"/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">E-mail</div>
+                <div class="form-field">
+                  <input type="text" value="sdfds@fdsf.ru"/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">Периодичность</div>
+                <div class="form-field">
+                  <select data-placeholder="Каждый день">
+                    <option value=""></option>
+                    <option value="1">Item</option>
+                    <option value="2">Item</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form-label">Тип отчёта</div>
+                <div class="form-field">
+                  <select data-placeholder="Поездки">
+                    <option value=""></option>
+                    <option value="1">Item</option>
+                    <option value="2">Item</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row form__row-inline">
+                <div class="form-label">Время</div>
+                <div class="form-field">
+                  <input type="text" value="23:00" class="timepicker"/>
+                </div>
+              </div>
+              <div class="form__row form__row-inline">
+                <div class="form-label">Формат</div>
+                <div class="form-field">
+                  <select data-placeholder="Поездки">
+                    <option value=""></option>
+                    <option value="1" selected="selected">PDF</option>
+                    <option value="2">HTML</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div id="m2" role="tabpanel" class="content__box-tabs-pane"></div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__add_reports -->
+    <!-- Button trigger modal modal__create-driver -->
+    <!-- begin Modal modal__create-driver -->
+    <div id="modal__create-driver" class="modal modal-large fade modal__create-driver">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Водитель</div>
+          </div>
+          <div class="modal-body">
+            <div class="grid grid__2">
+              <div class="grid__wrapper">
+                <div class="form__row">
+                  <div class="form-label">Имя</div>
+                  <div class="form-field">
+                    <input type="text" value="Сергей"/>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__wrapper">
+                <div class="form__row">
+                  <div class="form-label">Телефон</div>
+                  <div class="form-field">
+                    <input type="tel" value="+7 900 910 06 40"/>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__wrapper">
+                <div class="form__row">
+                  <div class="form-label">Табельный номер</div>
+                  <div class="form-field">
+                    <input type="text" value="23"/>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__wrapper">
+                <div class="grid grid__2">
+                  <div class="grid__wrapper">
+                    <div class="form__row">
+                      <div class="form-label">Ключ 1</div>
+                      <div class="form-field">
+                        <input type="text" value="23"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="form__row">
+                      <div class="form-label">Ключ 2</div>
+                      <div class="form-field">
+                        <input type="text" value="23"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Описание</div>
+              <div class="form-field">
+                <textarea></textarea>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form-label">Фото</div>
+              <div class="form-field">
+                <div class="file_upload">
+                  <button class="btn">Прикрепить</button>
+                  <div>Файл не выбран</div>
+                  <input type="file"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm float-right">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__create-driver -->
+    <!-- Button trigger modal modal__driver-place -->
+    <!-- begin Modal modal__driver-place -->
+    <div id="modal__driver-place" class="modal modal-xlarge fade modal__driver-place">
+      <div class="modal-dialog">
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"></a>
+          <div class="modal-header">
+            <div id="myModalLabel" class="modal-title">Название модали</div>
+          </div>
+          <div class="modal-body">
+            <table class="content__box_table form__row">
+              <thead>
+                <tr>
+                  <th>Объект</th>
+                  <th>Время назначения на объект</th>
+                  <th>Время снятия с объекта</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jeep Широкий</td>
+                  <td>01.01.2017 00:00</td>
+                  <td>31.12.2017 00:00</td>
+                  <td>
+                    <div class="delete__link"><i class="icon-close"> </i>Удалить</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jeep Широкий</td>
+                  <td>01.01.2017 00:00</td>
+                  <td>31.12.2017 00:00</td>
+                  <td>
+                    <div class="delete__link"><i class="icon-close"> </i>Удалить</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jeep Широкий</td>
+                  <td>01.01.2017 00:00</td>
+                  <td>31.12.2017 00:00</td>
+                  <td>
+                    <div class="delete__link"><i class="icon-close"> </i>Удалить</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="form__row">
+              <button class="btn btn-primary">Добавить</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-confirm float-right">
+              <div>
+                <button data-dismiss="modal" class="btn">Отменить</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__driver-place -->
+  </body>
+</html>

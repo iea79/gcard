@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,QAAS,CACR,QAAQ,CAAE,QAAQ,CAClB,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAE,CAAC,CACR,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC",
-"sources": ["../../scss/core/_map_box.scss"],
-"names": [],
-"file": "_map_box.css"
-}

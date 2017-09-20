@@ -2,16 +2,37 @@
 	font-size: 13px;
 	color: #333333;
 	position: absolute;
-	z-index: 30;
-	width: 100%;
-	max-width: 94%;
-	@include border-radius(6px);
+	right: 45px;
+	z-index: 4;
 	&.selected {
 		z-index: 31;
+	}
+	&--withe {
+		background-color: #fff;
+		padding: 25px 41px;
 	}
 	&_min {
 		@include box-shadow(0 10px 21px rgba(0, 0, 0, 0.25));
 		max-width: 350px;
+		z-index: 30;
+		right: auto;
+	}
+	&_full {
+		&-width {
+
+		}
+		&-screen {
+			@include border-radius(0px);
+			max-width: none;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			overflow: auto;
+			.content__box_wrap {
+				margin: 0;
+			}
+		}
 	}
 	&.ui-draggable {
 		.content__box_head {
@@ -170,6 +191,16 @@
 		border-collapse: collapse;
 		width: 100%;
 		color: #333333;
+		&-services {
+			th {
+				white-space: nowrap;
+			}
+			th,td {
+	        	&:first-of-type {
+	        		width: auto;
+	        	}
+			}
+		}
         input:not([type]),
         input[type=text],
         input[type=password],
@@ -251,13 +282,31 @@
         		}
         	}
         }
+        .edit__group {
+	        white-space: nowrap;    	
+	        .icon-edit,.icon-trash {
+	        	margin: 0 5px;
+	        }
+        }
 	}
 	&_slide_wrap {
 		&+.content__box_head {
 			margin-top: 8px;
 		}
 	}
+	&_title {
+		font-family: "Muller Bold";
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+		color: #133a63;
+	}
 	@media (max-width: 767px) {
 		max-width: none;
+		&--withe {
+			background-color: #fff;
+			padding: 25px 20px;
+		}
 	}
 }

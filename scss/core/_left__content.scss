@@ -32,7 +32,7 @@
 		background: image-url('left_toggle.svg') no-repeat center center transparentize(#185379, .6);
 		-webkit-transition: background-color 0.4s;
 		transition: background-color 0.4s;
-		z-index: 2;
+		z-index: 5;
 		&:hover {
 			background-color: transparentize(#185379, .5);
 		}
